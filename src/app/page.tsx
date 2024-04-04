@@ -19,10 +19,17 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-gray-200 hidden md:block">
-          Experience in Analyzing, Designing, Developing and Integrating Front-End & Back-End based applications. Experience in developing applications using NodeJs Services, MongoDb, and Restful Web Services. Experience in developing web applications using HTML, CSS,SASS, JavaScript, ReactJS, 
-          and NextJs. and accustomed to working using SDLC and Agile methods in developing a website.
+            Experience in Analyzing, Designing, Developing and Integrating Front-End & Back-End based applications. Experience in developing applications using NodeJs Services, MongoDb, and Restful Web Services. Experience in developing web applications using HTML, CSS,SASS, JavaScript, ReactJS,
+            and NextJs. and accustomed to working using SDLC and Agile methods in developing a website.
           </p>
           <div className="flex-col md:flex-row hidden md:flex gap-5">
+            <Link
+              href="/experience"
+              className="rounded-[20px] group relative bg-trasparent border border-white px-5 py-3 text-lg text-white max-w-[200px]"
+            >
+              <div className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-0 group-hver:opacity-20" />
+              Experience
+            </Link>
             <Link
               href="/my-skills"
               className="rounded-[20px] group relative bg-trasparent px-5 border border-white py-3 text-lg text-white max-w-[200px]"
@@ -36,15 +43,9 @@ export default function Home() {
               <div className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-0 group-hver:opacity-20" />
               Projects
             </Link>
+
             <Link
-              href="/contact-me"
-              className="rounded-[20px] group relative bg-trasparent border border-white px-5 py-3 text-lg text-white max-w-[200px]"
-            >
-              <div className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-0 group-hver:opacity-20" />
-              Contact me
-            </Link>
-            <Link
-              href="/contact-me"
+              href="/resume"
               className="rounded-[20px] group relative bg-trasparent border border-white px-5 py-3 text-lg text-white max-w-[200px]"
             >
               <div className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-0 group-hver:opacity-20" />
@@ -69,10 +70,10 @@ export default function Home() {
           My projects
         </Link>
         <Link
-          href="/contact-me"
+          href="/experience"
           className="rounded-[20px] group bg-trasparent border border-white px-5 py-3 text-lg text-white max-w-[200px]"
         >
-          Contact me
+          Experience
         </Link>
       </div>
 

@@ -1,4 +1,8 @@
 import { RxHome, RxPerson, RxDashboard, RxClipboard } from "react-icons/rx";
+import { GiSkills } from "react-icons/gi";
+import { LuFiles } from "react-icons/lu";
+import { MdWorkOutline } from "react-icons/md";
+
 
 export const SkillData = [
   {
@@ -110,8 +114,13 @@ export const NavLinks = [
     link: "/",
   },
   {
+    name: "/experince",
+    icon: MdWorkOutline,
+    link: "/experience",
+  },
+  {
     name: "/my-skills",
-    icon: RxPerson,
+    icon: GiSkills,
     link: "/my-skills",
   },
   {
@@ -120,8 +129,8 @@ export const NavLinks = [
     link: "/my-projects",
   },
   {
-    name: "/contact-me",
-    icon: RxClipboard,
-    link: "/contact-me",
+    name: "/resume",
+    icon: LuFiles,
+    link: "/resume",
   },
 ];
