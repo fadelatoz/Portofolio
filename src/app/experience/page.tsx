@@ -11,9 +11,11 @@ const Page = () => {
         className="h-[90%] w-[100%] p-6 relative bg-cover bg-center rounded-xl"
       >
         <div className="text-center">
-          <span className="text-transparent tex-bold bg-clip-text text-[45px] bg-gradient-to-r from-slate-100 to-green-300">
-            Experience
-          </span>
+          <h1 className="font-semibold text-white text-[50px]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
+              Experience{" "}
+            </span>
+          </h1>
         </div>
 
         <div className="border-y rounded-r p-5">

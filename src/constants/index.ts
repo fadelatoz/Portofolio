@@ -97,23 +97,13 @@ export const Socials = [
 export const Projects = [
   {
     title: "Natacara Id By Astra",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    text: "Natacara merupakan inovasi terbaru dari Astra Digital. Secara harfiah, Natacara merupakan kepanjangan dari ‘Menata Acara’. Dikembangkan secara khusus sebagai platform event management untuk memudahkan para penyelenggara maupun peserta event dalam mengadakan atau mengikuti event.",
     src: "/Natacara.png",
   },
   {
     title: "Seva Id By Astra",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    text: "SEVA adalah platform yang dioperasikan oleh PT Astra Auto Digital yang memudahkan pengguna dalam proses pengajuan pembelian dan pembiayaan (kredit) mobil yang didukung oleh Mitra yang terpercaya. SEVA memberikan kemudahan bagi pengguna untuk mendapatkan informasi terkait mobil, perhitungan kredit, dan juga pengajuan kredit mobil secara online. Syarat dan ketentuan pengajuan pembiayaan kepada Mitra yang tersedia pada aplikasi",
     src: "/seva_id.png",
-  },
-  {
-    title: "Natacara Id By Astra",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    src: "/Natacara.png",
-  },
-  {
-    title: "Space Themed Website",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    src: "/SpaceWebsite.png",
   },
 ];
 

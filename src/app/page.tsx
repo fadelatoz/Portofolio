@@ -11,14 +11,14 @@ export default function Home() {
         style={{ backgroundImage: "url(/main-bg.webp)" }}
       >
         <div className="pl-20 md:pl-40 pb-56 md:pb-20 flex flex-col gap-5 z-[10] max-w-[750px]">
-          <h1 className="text-[50px] text-white font-semibold">
+          <h1 className=" md:text-[50px] text-[30px] text-white font-semibold">
             Mohamad Fadel
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
               {" "}
               Frontend Developer
             </span>
           </h1>
-          <p className="text-gray-200 hidden md:block">
+          <p className="text-[12px] text-justify md:text-[16px] md:text-gray-200 md:block ">
             Experience in Analyzing, Designing, Developing and Integrating Front-End & Back-End based applications. Experience in developing applications using NodeJs Services, MongoDb, and Restful Web Services. Experience in developing web applications using HTML, CSS,SASS, JavaScript, ReactJS,
             and NextJs. and accustomed to working using SDLC and Agile methods in developing a website.
           </p>
@@ -55,35 +55,44 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="absolute flex bottom-10 z-[20] right-5 flex-col md:hidden gap-5">
-        <Link
-          href="/my-skills"
-          className="rounded-[20px] group bg-blue-500 px-5 py-3 text-lg text-white max-w-[200px]"
-        >
-          Learn more
-        </Link>
+      <div className="absolute flex bottom-[7rem] z-[20] right-5 flex-col md:hidden gap-5">
+      <Link
+              href="/experience"
+              className="rounded-[20px] group relative bg-trasparent border border-white px-5 py-3 text-lg text-white max-w-[200px]"
+            >
+              <div className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-0 group-hver:opacity-20" />
+              Experience
+            </Link>
+            <Link
+              href="/my-skills"
+              className="rounded-[20px] group relative bg-trasparent px-5 border border-white py-3 text-lg text-white max-w-[200px]"
+            >
+              Skills
+            </Link>
+            <Link
+              href="/my-projects"
+              className="rounded-[20px] group relative bg-trasparent px-5 border border-white py-3 text-lg text-white max-w-[200px]"
+            >
+              <div className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-0 group-hver:opacity-20" />
+              Projects
+            </Link>
 
-        <Link
-          href="/my-projects"
-          className="rounded-[20px] group bg-trasparent border border-white px-5 py-3 text-lg text-white max-w-[200px]"
-        >
-          My projects
-        </Link>
-        <Link
-          href="/experience"
-          className="rounded-[20px] group bg-trasparent border border-white px-5 py-3 text-lg text-white max-w-[200px]"
-        >
-          Experience
-        </Link>
+            <Link
+              href="/resume"
+              className="rounded-[20px] group relative bg-trasparent border border-white px-5 py-3 text-lg text-white max-w-[200px]"
+            >
+              <div className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-0 group-hver:opacity-20" />
+              Resume
+            </Link>
       </div>
 
       <div className="absolute bottom-0 right-0 z-[10]">
         <Image
           src="/horse.png"
           alt="horse"
-          height={300}
-          width={300}
-          className="absolute right-55 top-40"
+          width = {300}
+          height = {200}
+          className="absolute right-30 top-[17rem] md:right-55 md:top-40"
         />
 
         <Image src="/cliff.webp" alt="cliff" width={480} height={480} />

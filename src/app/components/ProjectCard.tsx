@@ -20,9 +20,9 @@ const ProjectCard = ({ image, title, text }: Props) => {
     }
     return (
         <div>
-            <div className='flex flex-col gap-[1rem] py-3 z-[30]'>
+            <div className='flex flex-col gap-[1rem] py-3 z-[30] min-h-40'>
                 <h1 className='text-whote text-[16px] font-semibold'>{title}</h1>
-                <p className='text-gray-200 text-[14px]'>
+                <p className='text-gray-200 text-[14px] text-justify'>
                     {text}
                 </p>
             </div>
