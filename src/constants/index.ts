@@ -101,6 +101,16 @@ export const Projects = [
     src: "/Natacara.png",
   },
   {
+    title: "Seva Id By Astra",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    src: "/seva_id.png",
+  },
+  {
+    title: "Natacara Id By Astra",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    src: "/Natacara.png",
+  },
+  {
     title: "Space Themed Website",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     src: "/SpaceWebsite.png",
@@ -114,7 +124,7 @@ export const NavLinks = [
     link: "/",
   },
   {
-    name: "/experince",
+    name: "/experience",
     icon: MdWorkOutline,
     link: "/experience",
   },

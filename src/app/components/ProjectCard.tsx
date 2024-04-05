@@ -21,14 +21,14 @@ const ProjectCard = ({ image, title, text }: Props) => {
     return (
         <div>
             <div className='flex flex-col gap-[1rem] py-3 z-[30]'>
-                <h1 className='text-whote text-md font-semibold'>{title}</h1>
+                <h1 className='text-whote text-[16px] font-semibold'>{title}</h1>
                 <p className='text-gray-200 text-[14px]'>
                     {text}
                 </p>
             </div>
             <div
                 onClick={handleFlip}
-                className='w-[450px] h-[280px] rounded-md cursor-pointer'>
+                className='w-[100%] h-[280px] rounded-md cursor-pointer'>
                 <motion.div
                     className='flip-card-inner w-full h-full'
                     initial={false}
