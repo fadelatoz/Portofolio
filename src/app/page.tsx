@@ -3,12 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
+
 export default function Home() {
   return (
     <main className="w-screen-[99vw] h-screen relative">
       <div
         className="flex items-center w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: "url(/main-bg.webp)" }}
+        style={{ backgroundImage: "url(/image/main-bg.webp)" }}
       >
         <div className="pl-20 md:pl-40 pb-56 md:pb-20 flex flex-col gap-5 z-[10] max-w-[750px]">
           <h1 className=" md:text-[50px] text-[30px] text-white font-semibold">
@@ -55,7 +56,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="absolute flex bottom-[7rem] z-[20] right-5 flex-col md:hidden gap-5">
+      <div className="absolute flex bottom-[13rem] z-[20] right-5 flex-col md:hidden gap-5">
       <Link
               href="/experience"
               className="rounded-[20px] group relative bg-trasparent border border-white px-5 py-3 text-lg text-white max-w-[200px]"
@@ -88,19 +89,19 @@ export default function Home() {
 
       <div className="absolute bottom-0 right-0 z-[10]">
         <Image
-          src="/horse.png"
+          src="/image/horse.png"
           alt="horse"
           width = {300}
           height = {200}
           className="absolute right-30 top-[17rem] md:right-55 md:top-40"
         />
 
-        <Image src="/cliff.webp" alt="cliff" width={480} height={480} />
+        <Image src="/image/cliff.webp" alt="cliff" width={480} height={480} />
       </div>
 
       <div className="absolute bottom-0 z-[5] w-full h-auto">
         <Image
-          src="/trees.webp"
+          src="/image/trees.webp"
           alt="trees"
           width={2000}
           height={2000}
@@ -109,7 +110,7 @@ export default function Home() {
       </div>
 
       <Image
-        src="/stars.png"
+        src="/image/stars.png"
         alt="stars"
         height={300}
         width={300}

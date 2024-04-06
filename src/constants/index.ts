@@ -83,28 +83,28 @@ export const SkillData = [
 export const Socials = [
   {
     name: "Linkedin",
-    src: "/linkedin.svg",
+    src: "/svg/linkedin.svg",
     linkTo : 'https://www.linkedin.com/in/mohamad-fadel-12a251194/'
   },
   {
     name: "Facebook",
-    src: "/facebook.svg",
+    src: "/svg/facebook.svg",
   },
   {
     name: "Instagram",
-    src: "/instagram.svg",
+    src: "/svg/instagram.svg",
   },
 ];
 export const Projects = [
   {
     title: "Natacara Id By Astra",
     text: "Natacara merupakan inovasi terbaru dari Astra Digital. Secara harfiah, Natacara merupakan kepanjangan dari ‘Menata Acara’. Dikembangkan secara khusus sebagai platform event management untuk memudahkan para penyelenggara maupun peserta event dalam mengadakan atau mengikuti event.",
-    src: "/Natacara.png",
+    src: "/image/Natacara.png",
   },
   {
     title: "Seva Id By Astra",
     text: "SEVA adalah platform yang dioperasikan oleh PT Astra Auto Digital yang memudahkan pengguna dalam proses pengajuan pembelian dan pembiayaan (kredit) mobil yang didukung oleh Mitra yang terpercaya. SEVA memberikan kemudahan bagi pengguna untuk mendapatkan informasi terkait mobil, perhitungan kredit, dan juga pengajuan kredit mobil secara online. Syarat dan ketentuan pengajuan pembiayaan kepada Mitra yang tersedia pada aplikasi",
-    src: "/seva_id.png",
+    src: "/image/seva_id.png",
   },
 ];
 
