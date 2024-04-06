@@ -82,8 +82,9 @@ export const SkillData = [
 
 export const Socials = [
   {
-    name: "Discord",
-    src: "/instagram.svg",
+    name: "Linkedin",
+    src: "/linkedin.svg",
+    linkTo : 'https://www.linkedin.com/in/mohamad-fadel-12a251194/'
   },
   {
     name: "Facebook",
@@ -91,7 +92,7 @@ export const Socials = [
   },
   {
     name: "Instagram",
-    src: "/discord.svg",
+    src: "/instagram.svg",
   },
 ];
 export const Projects = [
