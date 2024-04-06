@@ -8,7 +8,7 @@ const PageProjects = () => {
   return (
 
     <div
-    id='/my-projects'
+      id='/my-projects'
       style={{ backgroundImage: "url(/image/bg-3.jpg)" }}
       className="w-screen h-screen bg-cover bg-center flex items-center justify-center"
     >

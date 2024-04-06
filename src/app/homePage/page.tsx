@@ -8,6 +8,7 @@ import Transition from "../components/Transition";
 import Image from "next/image";
 import { useInView,useAnimation,useIsPresent,motion } from "framer-motion";
 import { Reveal } from "../components/utilts/Reveal";
+import Head from "next/head";
 
 interface props {
   children : JSX.Element;
@@ -42,6 +43,14 @@ const HomePage = () => {
   }, [isRouting]);
 
   return (
+    <>
+    <Head>
+      <link rel="manifest" href="/manifest.json"/>
+      <link rel="icon" href="/rocket-lunch.png"/>
+      <link rel="theme-color" content="fff"/>
+
+
+    </Head>
     <div
       id="/"
       className="h-screen w-screen flex items-center justify-start bg-cover bg-center"
@@ -126,9 +135,9 @@ const HomePage = () => {
           </Link>
         ))}
       </div>
-
-      
     </div>
+    </>
+
     
 
 
