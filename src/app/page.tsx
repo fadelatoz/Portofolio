@@ -3,16 +3,14 @@
 import Image from "next/image";
 import HomePage from "./homePage/page";
 import PageSkills from "./my-skills/page";
+import PageExperience from "./experience/page";
 import PageProjects from "./my-projects/page";
 import PageResume from "./resume/page";
 import { motion, useScroll } from "framer-motion";
 import ScrollProgress from "./components/ProgressScroll";
 
 
-import { Reveal } from "./components/utilts/Reveal";
-
 export default function Home() {
-  const { scrollYProgress } = useScroll();
 
   return (
     <>
@@ -20,6 +18,7 @@ export default function Home() {
       <main className="w-screen-[99vw] h-screen relative">
         <HomePage />
         <PageSkills />
+        <PageExperience/>
         <PageProjects />
         <PageResume />
 
