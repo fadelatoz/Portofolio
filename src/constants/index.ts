@@ -127,27 +127,27 @@ export const Projects = [
 
 export const NavLinks = [
   {
-    name: "/",
+    name: "Home",
     icon: RxHome,
     link: "/",
   },
   {
-    name: "/experience",
+    name: "Experience",
     icon: MdWorkOutline,
     link: "/experience",
   },
   {
-    name: "/my-skills",
+    name: "Skills",
     icon: GiSkills,
     link: "/my-skills",
   },
   {
-    name: "/my-projects",
+    name: "Projects",
     icon: RxDashboard,
     link: "/my-projects",
   },
   {
-    name: "/resume",
+    name: "Resume",
     icon: LuFiles,
     link: "/resume",
   },

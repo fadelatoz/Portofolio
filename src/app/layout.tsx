@@ -55,7 +55,6 @@ export default function RootLayout({
         <SpeedInsights/>
         <Analytics/>
         <Navbar />
-        <Navigation/>
         {session}
         {children}
         </body>
