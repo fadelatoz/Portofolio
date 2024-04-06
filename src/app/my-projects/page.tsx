@@ -8,7 +8,7 @@ const Page = () => {
   return (
 
     <div
-      style={{ backgroundImage: "url(bg-3.jpg)" }}
+      style={{ backgroundImage: "url(/image/bg-3.jpg)" }}
       className="w-screen h-screen bg-cover bg-center flex items-center justify-center"
     >
       <div

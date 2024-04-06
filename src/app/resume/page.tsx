@@ -9,7 +9,7 @@ const Page = () => {
             <Head>
                 <title>PDF Viewer</title>
             </Head>
-            <iframe className='w-[100%] h-full' src="/Fadel_Resume.pdf" height="800px"></iframe>
+            <iframe className='w-[100%] h-full' src="/pdf/Fadel_Resume.pdf" height="800px"></iframe>
         </div>)
 }
 
