@@ -20,7 +20,7 @@ const Navbar = () => {
 
       <div className="flex flex-row gap-5 mb-2">
         {Socials.map((social) => (
-          <button onClick = {() => window.location.href = social?.linkTo}>
+          // <button onClick = {() => window.location.href = social?.linkTo}>
           <Image
             key={social.name}
             src={social.src}
@@ -29,7 +29,7 @@ const Navbar = () => {
             width={20}
             height={20}
           />
-          </button>
+          // </button>
         ))}
       </div>
     </div>
