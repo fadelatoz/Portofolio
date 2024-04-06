@@ -30,7 +30,7 @@ const Page = () => {
           </div>
 
           <div className="pt-[20px]">
-            <ul className="text-[9px] md:text-[18px] font-mono">
+            <ul className="text-white text-[9px] md:text-[18px] font-mono">
               <li> - Create and develop the front view of the website based on the design of the UI/UX team that will be displayed and used by the user.</li>
               <li> - Create and develop content management system (CMS) to make it easier for the operations team to change or adjust the appearance of the website without having to know programming</li>
               <li> - Manage website, user experience, design, and bussines flow.</li>
