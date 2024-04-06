@@ -6,9 +6,10 @@ import { SkillData } from "@/constants";
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 
-const Page = () => {
+const PageSkills = () => {
   return (
     <div
+      id="/my-skills"
       style={{ backgroundImage: "url(/image/bg-2.jpg)" }}
       className="h-screen w-screen flex items-center justify-center bg-cover bg-center"
     >
@@ -73,4 +74,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default PageSkills;

@@ -4,77 +4,94 @@ import { LuFiles } from "react-icons/lu";
 import { MdWorkOutline } from "react-icons/md";
 
 
+export const HomeButton = [
+  {
+    name : 'Experience',
+    link : '/experience'
+  },
+  {
+    name : 'Skills',
+    link : '/my-skills'
+  },  {
+    name : 'Projects',
+    link : '/my-projects'
+  },  {
+    name : 'Resume',
+    link : '/resume'
+  },
+]
+
 export const SkillData = [
   {
     name: "Html 5",
-    Image: "/html.png",
+    Image: "/image/html.png",
     width: 80,
     height: 80,
   },
   {
     name: "Css",
-    Image: "/css.png",
+    Image: "/image/css.png",
     width: 80,
     height: 80,
   },
   {
     name: "JavaScript",
-    Image: "/js.png",
+    Image: "/image/js.png",
     width: 65,
     height: 65,
   },
   {
     name: "Tailwind Css",
-    Image: "/tailwind.png",
+    Image: "/image/tailwind.png",
     width: 80,
     height: 80,
   },
   {
     name: "React",
-    Image: "/react.png",
+    Image: "/image/react.png",
     width: 80,
     height: 80,
   },
   {
     name: "Redux",
-    Image: "/redux.png",
+    Image: "/image/redux.png",
     width: 80,
     height: 80,
   },
 
   {
     name: "TypeScript",
-    Image: "/ts.png",
+    Image: "/image/ts.png",
     width: 80,
     height: 80,
   },
   {
     name: "Next js 13",
-    Image: "/next.png",
+    Image: "/image/next.png",
     width: 80,
     height: 80,
   },
   {
     name: "Framer Motion",
-    Image: "/framer.png",
+    Image: "/image/framer.png",
     width: 80,
     height: 80,
   },
   {
     name: "Stripe Payment",
-    Image: "/stripe.webp",
+    Image: "/image/stripe.webp",
     width: 80,
     height: 80,
   },
   {
     name: "Node js",
-    Image: "/node-js.png",
+    Image: "/image/node-js.png",
     width: 80,
     height: 80,
   },
   {
     name: "Mongo db",
-    Image: "/mongodb.png",
+    Image: "/image/mongodb.png",
     width: 40,
     height: 40,
   },
@@ -135,3 +152,4 @@ export const NavLinks = [
     link: "/resume",
   },
 ];
+

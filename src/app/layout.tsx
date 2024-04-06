@@ -6,6 +6,11 @@ import Navigation from './components/Navigation'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import type { Viewport } from 'next'
+import HomePage from './homePage/page'
+import PageExperience from './experience/page'
+import PageSkills from './my-skills/page'
+import PageResume from './resume/page'
+import PageProjects from './my-projects/page'
 
 
 export const viewport: Viewport = {
@@ -38,17 +43,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  session,
 }: {
   children: React.ReactNode
+  session: never;
+
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} w-screen h-screen relative`} >
         <SpeedInsights/>
         <Analytics/>
         <Navbar />
+        <Navigation/>
+        {session}
         {children}
-        <Navigation />
         </body>
     </html>
   )

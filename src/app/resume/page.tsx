@@ -2,9 +2,10 @@
 import Head from 'next/head'
 import React from 'react'
 
-const Page = () => {
+const PageResume = () => {
     return (
         <div
+            id='/resume'
             className='w-screen h-screen flex items-center justify-center bg-center bg-cover'>
             <Head>
                 <title>PDF Viewer</title>
@@ -13,4 +14,4 @@ const Page = () => {
         </div>)
 }
 
-export default Page
+export default PageResume

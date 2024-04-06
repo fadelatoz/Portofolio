@@ -4,10 +4,11 @@ import ProjectCard from '@/app/components/ProjectCard'
 import { Projects } from '@/constants'
 import React from 'react'
 
-const Page = () => {
+const PageProjects = () => {
   return (
 
     <div
+    id='/my-projects'
       style={{ backgroundImage: "url(/image/bg-3.jpg)" }}
       className="w-screen h-screen bg-cover bg-center flex items-center justify-center"
     >
@@ -40,4 +41,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default PageProjects
