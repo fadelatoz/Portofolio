@@ -49,7 +49,7 @@ const HomePage = () => {
       <div
         id="/"
         className="h-screen w-screen flex items-center justify-start bg-cover bg-center"
-        style={{ backgroundImage: "url(/image/main-bg.webp)" }}
+        // style={{ backgroundImage: "url(/image/main-bg.webp)" }}
       >
         <div className="absolute bottom-0 right-0 z-[10]">
           <Image

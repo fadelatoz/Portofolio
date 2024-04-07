@@ -14,7 +14,7 @@ const PageProjects = () => {
 
     <div
       id='/my-projects'
-      style={{ backgroundImage: "url(/image/background/background_projects.jpg)" }}
+      // style={{ backgroundImage: "url(/image/background/background_projects.jpg)" }}
       className="w-screen h-screen bg-cover bg-center flex items-center justify-center"
     >
       <div

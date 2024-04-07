@@ -9,6 +9,8 @@ export default function ScrollProgress() {
     damping: 30,
     restDelta: 0.001
   });
+
+  console.log(scrollYProgress)
   return (
     <>
       <motion.div

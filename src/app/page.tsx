@@ -22,11 +22,13 @@ export default function Home() {
         <link rel="theme-color" content="fff" />
       </Head>
       <ScrollProgress />
-      <main style={{ backgroundImage: "url(/image/main-bg.webp)" }}
-        className="w-screen-[99vw] h-screen relative">
+      <main  style={{ backgroundImage: "url(/image/main-bg.webp)" }}
+        className="w-screen-[99vw] h-screen fixed overflow-y-auto ">
+          
         <Reveal>
           <HomePage />
         </Reveal>
+
         <Reveal>
           <PageSkills />
         </Reveal>
@@ -45,6 +47,8 @@ export default function Home() {
 
 
         <div className="absolute bottom-0 z-[5] w-full h-auto">
+        <Reveal>
+
           <Image
             src="/image/trees.webp"
             alt="trees"
@@ -52,7 +56,10 @@ export default function Home() {
             height={2000}
             className="w-full h-full"
           />
+                  </Reveal>
+
         </div>
+
 
         <Image
           src="/image/stars.png"
