@@ -9,6 +9,7 @@ import Image from "next/image";
 import { useInView, useAnimation, useIsPresent, motion } from "framer-motion";
 import { Reveal } from "../components/utilts/Reveal";
 import Head from "next/head";
+import PageExperience from "../experience/page";
 
 interface props {
   children: JSX.Element;
@@ -44,13 +45,7 @@ const HomePage = () => {
 
   return (
     <>
-      <Head>
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/rocket-lunch.png" />
-        <link rel="theme-color" content="fff" />
-
-
-      </Head>
+    
       <div
         id="/"
         className="h-screen w-screen flex items-center justify-start bg-cover bg-center"
@@ -64,8 +59,7 @@ const HomePage = () => {
             height={200}
             className="absolute right-30 top-[17rem] md:right-55 md:top-40"
           />
-
-          <Image src="/image/cliff.webp" alt="cliff" width={480} height={480} />
+          {/* <Image src="/image/cliff.webp" alt="cliff" width={480} height={480} /> */}
         </div>
 
         <div className="p-10 md:pl-40 pb-56 md:pb-20 flex flex-col gap-5 z-[10] max-w-[750px]">
@@ -77,12 +71,11 @@ const HomePage = () => {
                 Frontend Developer
               </span>
             </h1>
-          </Reveal>
-          <Reveal>
-            <p className="text-[12px] text-justify md:text-[16px] md:text-gray-200 md:block ">
-              Experience in Analyzing, Designing, Developing and Integrating Front-End & Back-End based applications. Experience in developing applications using NodeJs Services, MongoDb, and Restful Web Services. Experience in developing web applications using HTML, CSS,SASS, JavaScript, ReactJS,
-              and NextJs. and accustomed to working using SDLC and Agile methods in developing a website.
-            </p>
+              <p className="text-[12px] text-justify md:text-[16px] md:text-gray-200 md:block ">
+                Experience in Analyzing, Designing, Developing and Integrating Front-End & Back-End based applications. Experience in developing applications using NodeJs Services, MongoDb, and Restful Web Services. Experience in developing web applications using HTML, CSS,SASS, JavaScript, ReactJS,
+                and NextJs. and accustomed to working using SDLC and Agile methods in developing a website.
+              </p>
+
           </Reveal>
 
 
@@ -90,16 +83,16 @@ const HomePage = () => {
             <div className="flex-col md:flex-row md:flex gap-5">
               {Socials.map((social) => (
                 <>
-                <Button>
-                  <Image
-                    key={social.name}
-                    src={social.src}
-                    alt={social.name}
-                    className="z-10"
+                  <Button>
+                    <Image
+                      key={social.name}
+                      src={social.src}
+                      alt={social.name}
+                      className="z-10"
 
-                    width={25}
-                    height={25}
-                  />
+                      width={25}
+                      height={25}
+                    />
                   </Button>
 
                 </>
@@ -110,30 +103,6 @@ const HomePage = () => {
 
           </Reveal>
         </div>
-
-
-        {/* <div className="absolute flex bottom-[13rem] z-[20] right-5 flex-col md:hidden gap-5">
-          {HomeButton?.map((nav) => (
-            <Link
-              key={nav.name}
-              activeClass="active"
-              to={nav.link}
-              spy={true}
-              smooth={true}
-              hashSpy={true}
-              offset={50}
-              duration={500}
-              delay={1000}
-              isDynamic={true}
-              // onSetActive={this.handleSetActive}
-              // onSetInactive={this.handleSetInactive}
-              ignoreCancelEvents={false}
-              spyThrottle={500}
-              className="mb-[10px] pl-4 min-w-[20%]">
-              <Button text={nav?.name} />
-            </Link>
-          ))}
-        </div> */}
       </div>
     </>
 

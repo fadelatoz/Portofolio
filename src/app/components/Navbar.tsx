@@ -21,9 +21,8 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-      <div className="fixed top-0 z-[40] w-full h-[100px] bg-transparent flex justify-between items-center px-10 md:px-20">
+      <div className="fixed bg-opacity-50 top-0 z-[40] w-full h-[65px] bg-black  flex justify-between items-center px-10 md:px-20">
         <h1 className="text-white text-[25px] font-semibold">
-          Web{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
             {" "}
             Developer{" "}
@@ -114,8 +113,8 @@ const Navbar = () => {
         </div>
       </div>
       {openNavbar &&
-        <div className=" w-full md:hidden md:w-auto fixed top-16 z-50" id="navbar-multi-level">
-          <ul className="flex bg-gray-400 m-5 flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0   dark:border-gray-700">
+        <div className=" w-full top-[4rem] md:hidden md:w-auto fixed bg-black bg-opacity-50 z-50" id="navbar-multi-level">
+          <ul className="flex bg-black-400 border-none mar m-5 flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0   dark:border-gray-700">
             <li>
               <div id="dropdownNavbar" className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                 <ul className="py-2 text-sm bg-transparent text-gray-700 dark:text-gray-200" aria-labelledby="dropdownLargeButton">
@@ -158,7 +157,7 @@ const Navbar = () => {
             </li>
 
             {NavLinks?.map((nav, k) => (
-              <li key={k} className="cursor-pointer">
+              <li key={k} className="cursor-pointer mb-5">
                 <Link
                   key={nav.name}
                   activeClass="active"

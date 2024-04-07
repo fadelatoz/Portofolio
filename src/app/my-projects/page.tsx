@@ -3,13 +3,18 @@
 import ProjectCard from '@/app/components/ProjectCard'
 import { Projects } from '@/constants'
 import React from 'react'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+
+
 
 const PageProjects = () => {
   return (
 
     <div
       id='/my-projects'
-      style={{ backgroundImage: "url(/image/bg-3.jpg)" }}
+      style={{ backgroundImage: "url(/image/background/background_projects.jpg)" }}
       className="w-screen h-screen bg-cover bg-center flex items-center justify-center"
     >
       <div
@@ -23,17 +28,34 @@ const PageProjects = () => {
           </h1>
         </div>
 
-        <div className=' grid grid-cols-2 p-[20px] gap-5 max-w-[100%] max-h-[700px] overflow-y-auto'>
+        <Swiper
+            slidesPerView={1}
+            loop={true}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+            }}
+            speed={5000}
+            modules={[Autoplay]}
+            className="max-w-[80%]"
+          >
+        <div className=' grid grid-cols-2 mr-5 p-[20px] gap-5 max-w-[100%] min-h-[700px] '>
+       
+            {Projects.map((project, index) => (
+              <SwiperSlide className='ml-[20px]' key={index}>
 
-          {Projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              text={project.text}
-              image={project.src}
-            />
-          ))}
+                <ProjectCard
+                  key={index}
+                  title={project.title}
+                  text={project.text}
+                  image={project.src}
+                />
+              </SwiperSlide>
+
+            ))}
         </div>
+        </Swiper>
+
       </div>
 
     </div>

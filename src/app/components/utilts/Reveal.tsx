@@ -1,57 +1,50 @@
 "use-client"
-import React, { useEffect, useState,useRef } from "react";
-import { useInView,useAnimation,useIsPresent,motion } from "framer-motion";
+import React, { useEffect, useState, useRef } from "react";
+import { useInView, useAnimation, useIsPresent, motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 
 
 
 
 interface props {
-    children : JSX.Element;
-    width? : 'fit-content'
-  }
-  
-  export const Reveal = ({children ,width ='fit-content'} : props) => {
-    const ref = useRef(null)
-    const isInView = useInView(ref , {once : false})
+  children: React.ReactNode;
+  width?: 'fit-content'
+}
 
-    const mainControls = useAnimation()
+export const Reveal = ({ children, width = 'fit-content' }: props) => {
+  const ref = useRef(null)
+  const isInView = useInView(ref)
 
-    useEffect (() => {
-      console.log(isInView)
+  const mainControls = useAnimation()
 
-      if(isInView){
-        mainControls.start('visible')
-      }
-    },[isInView])
+  const { scrollY } = useScroll()
 
-    return (
-      <div ref={ref} >
-        <motion.div
-          variants={{
-            hidden : {opacity : 0,y:75},
-            visible : {opacity:1, y:0},
-          }}
-          initial = "hidden"
-          animate = {mainControls}
-          transition={{duration : 0.15,delay : 0.15,ease: "easeOut",}}
-        >
-          {children}
-        </motion.div>
-        <motion.div
-          variants={{
-            hidden : {opacity : 0,y:75},
-            visible : {opacity:1, y:0},
-          }}
-          initial = "hidden"
-          animate = {mainControls}
-          transition={{duration : 0.5,delay : 0.25}}
-        >
-        </motion.div>
-        
-      </div>
-      
-    )
-  }
-  
-  
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    // console.log("Page scroll: ", latest)
+  })
+
+  useEffect(() => {
+    console.log('isRevealHome : ', isInView)
+
+    if (isInView) {
+      mainControls.start('visible')
+    }
+  }, [isInView])
+
+  return (
+    <div ref={ref} >
+      <motion.div
+        style={{
+          transform: isInView ? "none" : "translateX(-200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+        }}
+      >
+        {children}
+      </motion.div>
+
+    </div>
+
+  )
+}
+
