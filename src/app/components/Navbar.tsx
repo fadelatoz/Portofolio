@@ -24,14 +24,15 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-      <div className="fixed bg-opacity-50 top-0 z-[40] w-full h-[65px] bg-black  flex justify-between items-center px-10 md:px-20">
-        <h1 className="text-white text-[25px] font-semibold">
+      <div className="fixed shadow-slate-400  top-0 z-[40] w-full h-[65px] bg-black dark:bg-white  flex justify-between items-center px-10 md:px-20">
+        <h1 className="text-white text-[25px] font-mono font-semibold">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
+            Mohamad
             {" "}
-            Developer{" "}
+            Fadel{" "}
           </span>
         </h1>
-        <ThemeSwitch/>
+        <ThemeSwitch />
 
 
 
@@ -44,7 +45,7 @@ const Navbar = () => {
 
         <div className=" w-full hidden md:block md:w-auto" id="navbar-multi-level">
           <ul className="flex bg-transparent flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0   dark:border-gray-700">
-            <li>
+            {/* <li>
               <div id="dropdownNavbar" className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                 <ul className="py-2 text-sm bg-transparent text-gray-700 dark:text-gray-200" aria-labelledby="dropdownLargeButton">
                   <li aria-labelledby="dropdownNavbarLink">
@@ -52,33 +53,6 @@ const Navbar = () => {
                       <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
                        
                        <ThemeSwitch/>
-                        {NavLinks?.map((nav, k) => (
-                          <li key={k}>
-                            <Link
-                              key={nav.name}
-                              activeClass={nav.name}
-                              to={nav.link}
-                              spy={true}
-                              smooth={true}
-                              hashSpy={true}
-                              offset={50}
-                              duration={500}
-                              delay={1000}
-                              isDynamic={true}
-                              // onSetActive={this.handleSetActive}
-                              // onSetInactive={this.handleSetInactive}
-                              ignoreCancelEvents={false}
-                              spyThrottle={500}
-                              className="mb-[10px] pl-4 min-w-[20%]"
-                            >
-                              {nav.name?.includes(nav.link) && <p>KNTL</p>}
-                              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
-                                {nav.name}
-                              </span>
-                            </Link>
-                          </li>
-                        ))}
-
                       </ul>
                     </div>
                   </li>
@@ -86,34 +60,29 @@ const Navbar = () => {
                 </ul>
 
               </div>
-            </li>
+            </li> */}
 
             {NavLinks?.map((nav, k) => (
               <li key={k} className="cursor-pointer">
                 <Link
                   key={nav.name}
-                  activeClass="active"
+                  activeClass='active'
                   to={nav.link}
                   spy={true}
                   smooth={true}
                   hashSpy={true}
                   offset={50}
                   duration={500}
-                  delay={1000}
+                  delay={100}
                   isDynamic={true}
                   // onSetActive={this.handleSetActive}
                   // onSetInactive={this.handleSetInactive}
                   ignoreCancelEvents={false}
                   spyThrottle={500}
                   className="mb-[10px] pl-4 min-w-[20%]" >
-                  {/* {nav.link === '/' ?
-                    <span className="text-transparent z-50 font-bold text-[20px] bg-clip-text bg-gradient-to-r from-red-100 to-red-500">
-                      {nav.name}
-                    </span>
-                    : */}
-                    <span className="text-white z-50 font-bold text-[20px] bg-clip-text bg-gradient-to-r">
-                      {nav.name}
-                    </span>
+                  <span className="text-white dark:text-red z-50 font-bold text-[20px]">
+                    {nav.name}
+                  </span>
                   {/* } */}
                 </Link>
               </li>

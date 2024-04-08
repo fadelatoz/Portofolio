@@ -67,7 +67,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           <main
-            className="w-screen-[99vw] h-screen mx-auto bg-fixed bg-white fixed overflow-y-auto dark:bg-black">
+            className="w-screen-[99vw] h-screen mx-auto bg-fixed bg-slate-300  dark:bg-gray-800">
             {children}
           </main>
         </Providers>
