@@ -1,3 +1,4 @@
+"use-client"
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -7,6 +8,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import type { Viewport } from 'next'
 import { Providers } from '../../public/providers'
+import { useTheme } from "next-themes";
+import Image from 'next/image'
+import ThemeSwitch from './components/buttonComponent/ThemeSwitch'
+
 
 
 export const viewport: Viewport = {
@@ -44,18 +49,25 @@ export default function RootLayout({
   children: React.ReactNode
   session: never;
 
+
 }) {
+  const bannerStyle = {
+    // backgroundImage: `url(/image/main-bg.webp) `,
+  }
+  
+
   return (
-    <html lang="en">
-      <body className= 'bg-slate-300 dark:bg-black'  >
+    <html suppressHydrationWarning>
+      <body
+        style={bannerStyle}
+        // className='bg-white bg-fixed dark:bg-black'  
+        >
         <SpeedInsights />
         <Analytics />
         <Providers>
-
           <Navbar />
-          {session}
           <main
-            className="w-screen-[99vw] h-screen mx-auto">
+            className="w-screen-[99vw] h-screen mx-auto bg-fixed bg-white fixed overflow-y-auto dark:bg-black">
             {children}
           </main>
         </Providers>

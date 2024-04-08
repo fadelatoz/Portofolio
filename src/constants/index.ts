@@ -7,11 +7,11 @@ import { MdWorkOutline } from "react-icons/md";
 export const HomeButton = [
   {
     name : 'Experience',
-    link : '/experience'
+    link : '/Experience'
   },
   {
     name : 'Skills',
-    link : '/my-skills'
+    link : '/skills'
   },  {
     name : 'Projects',
     link : '/my-projects'

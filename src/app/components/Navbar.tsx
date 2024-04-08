@@ -6,19 +6,21 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { motion, useScroll } from "framer-motion";
 import ThemeSwitch from "./buttonComponent/ThemeSwitch";
+import { usePathname } from "next/navigation";
 
 
 
 const Navbar = () => {
   const { scrollYProgress } = useScroll();
   const [openNavbar, setOpenNavbar] = useState(false)
+  const path = usePathname();
+
 
   useEffect(() => {
     if (process.browser) {
       console.log(window.location.href)
     }
   }, [scrollYProgress])
-
 
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
@@ -54,7 +56,7 @@ const Navbar = () => {
                           <li key={k}>
                             <Link
                               key={nav.name}
-                              activeClass="active"
+                              activeClass={nav.name}
                               to={nav.link}
                               spy={true}
                               smooth={true}
@@ -69,6 +71,7 @@ const Navbar = () => {
                               spyThrottle={500}
                               className="mb-[10px] pl-4 min-w-[20%]"
                             >
+                              {nav.name?.includes(nav.link) && <p>KNTL</p>}
                               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
                                 {nav.name}
                               </span>
@@ -103,15 +106,15 @@ const Navbar = () => {
                   ignoreCancelEvents={false}
                   spyThrottle={500}
                   className="mb-[10px] pl-4 min-w-[20%]" >
-                  {nav.link === '/' ?
+                  {/* {nav.link === '/' ?
                     <span className="text-transparent z-50 font-bold text-[20px] bg-clip-text bg-gradient-to-r from-red-100 to-red-500">
                       {nav.name}
                     </span>
-                    :
+                    : */}
                     <span className="text-white z-50 font-bold text-[20px] bg-clip-text bg-gradient-to-r">
                       {nav.name}
                     </span>
-                  }
+                  {/* } */}
                 </Link>
               </li>
             ))}

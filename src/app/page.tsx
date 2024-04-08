@@ -1,17 +1,14 @@
 "use client"
 
-import Image from "next/image";
 import HomePage from "./homePage/page";
 import PageSkills from "./my-skills/page";
 import PageExperience from "./experience/page";
 import PageProjects from "./my-projects/page";
 import PageResume from "./resume/page";
-// import { motion, useScroll } from "framer-motion";
 import Head from "next/head";
 import ScrollProgress from "./components/ProgressScroll";
 import { Reveal } from "./components/utilts/Reveal";
-// import {NextUIProvider} from "@nextui-org/react";
-import {ThemeProvider as NextThemesProvider} from "next-themes";
+import { useTheme } from "next-themes";
 
 
 
@@ -24,8 +21,6 @@ export default function Home() {
         <link rel="theme-color" content="fff" />
       </Head>
       <ScrollProgress />
-
-
         <Reveal>
           <HomePage />
         </Reveal>

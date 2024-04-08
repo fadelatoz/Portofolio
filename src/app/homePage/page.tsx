@@ -8,8 +8,8 @@ import Transition from "../components/Transition";
 import Image from "next/image";
 import { useInView, useAnimation, useIsPresent, motion } from "framer-motion";
 import { Reveal } from "../components/utilts/Reveal";
-import Head from "next/head";
-import PageExperience from "../experience/page";
+import { useTheme } from 'next-themes'
+
 
 interface props {
   children: JSX.Element;
@@ -22,6 +22,8 @@ const HomePage = () => {
   const [isRouting, setisRouting] = useState(false);
   const path = usePathname();
   const [prevPath, setPrevPath] = useState("/");
+    const { setTheme, resolvedTheme } = useTheme()
+
 
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
@@ -43,13 +45,14 @@ const HomePage = () => {
     }
   }, [isRouting]);
 
+
   return (
     <>
     
       <div
         id="/"
         className="h-screen w-screen flex items-center justify-start bg-cover bg-center"
-        // style={{ backgroundImage: "url(/image/main-bg.webp)" }}
+        // style={ { backgroundImage: "url(/image/main-bg.webp)" }}
       >
 
         <div className="p-10 md:pl-40 pb-56 md:pb-20 flex flex-col gap-5 z-[10] max-w-[750px]">
@@ -61,10 +64,10 @@ const HomePage = () => {
                 Frontend Developer
               </span>
             </h1>
-              <p className="text-[12px] text-justify md:text-[16px] md:text-gray-200 md:block ">
+              <span className="text-[12px] text-transparent text-white dark:text-red-50  text-justify bg-clip-text bg-gradient-to-r font-bold font-cursive dark:from-green-500 to-gray-300  md:text-[16px]  ">
                 Experience in Analyzing, Designing, Developing and Integrating Front-End & Back-End based applications. Experience in developing applications using NodeJs Services, MongoDb, and Restful Web Services. Experience in developing web applications using HTML, CSS,SASS, JavaScript, ReactJS,
                 and NextJs. and accustomed to working using SDLC and Agile methods in developing a website.
-              </p>
+              </span>
 
           </Reveal>
 
