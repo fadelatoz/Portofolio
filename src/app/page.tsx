@@ -10,6 +10,8 @@ import PageResume from "./resume/page";
 import Head from "next/head";
 import ScrollProgress from "./components/ProgressScroll";
 import { Reveal } from "./components/utilts/Reveal";
+// import {NextUIProvider} from "@nextui-org/react";
+import {ThemeProvider as NextThemesProvider} from "next-themes";
 
 
 
@@ -22,9 +24,8 @@ export default function Home() {
         <link rel="theme-color" content="fff" />
       </Head>
       <ScrollProgress />
-      <main  style={{ backgroundImage: "url(/image/main-bg.webp)" }}
-        className="w-screen-[99vw] h-screen fixed overflow-y-auto ">
-          
+
+
         <Reveal>
           <HomePage />
         </Reveal>
@@ -46,7 +47,7 @@ export default function Home() {
         </Reveal>
 
 
-        <div className="absolute bottom-0 z-[5] w-full h-auto">
+        {/* <div className="absolute bottom-0 z-[5] w-full h-auto">
         <Reveal>
 
           <Image
@@ -67,8 +68,7 @@ export default function Home() {
           height={300}
           width={300}
           className="absolute top-0 left-0 z-[10]"
-        />
-      </main>
+        /> */}
     </>
 
   );

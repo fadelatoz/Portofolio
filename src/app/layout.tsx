@@ -6,17 +6,13 @@ import Navigation from './components/Navigation'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import type { Viewport } from 'next'
-import HomePage from './homePage/page'
-import PageExperience from './experience/page'
-import PageSkills from './my-skills/page'
-import PageResume from './resume/page'
-import PageProjects from './my-projects/page'
+import { Providers } from '../../public/providers'
 
 
 export const viewport: Viewport = {
   themeColor: 'black',
 }
- 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -51,13 +47,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} w-screen h-screen relative`} >
-        <SpeedInsights/>
-        <Analytics/>
-        <Navbar />
-        {session}
-        {children}
-        </body>
+      <body className= 'bg-slate-300 dark:bg-black'  >
+        <SpeedInsights />
+        <Analytics />
+        <Providers>
+
+          <Navbar />
+          {session}
+          <main
+            className="w-screen-[99vw] h-screen mx-auto">
+            {children}
+          </main>
+        </Providers>
+      </body>
     </html>
   )
 }

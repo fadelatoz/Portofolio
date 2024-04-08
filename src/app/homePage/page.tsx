@@ -51,16 +51,6 @@ const HomePage = () => {
         className="h-screen w-screen flex items-center justify-start bg-cover bg-center"
         // style={{ backgroundImage: "url(/image/main-bg.webp)" }}
       >
-        <div className="absolute bottom-0 right-0 z-[10]">
-          <Image
-            src="/image/horse.png"
-            alt="horse"
-            width={300}
-            height={200}
-            className="absolute right-30 top-[17rem] md:right-55 md:top-40"
-          />
-          {/* <Image src="/image/cliff.webp" alt="cliff" width={480} height={480} /> */}
-        </div>
 
         <div className="p-10 md:pl-40 pb-56 md:pb-20 flex flex-col gap-5 z-[10] max-w-[750px]">
           <Reveal>

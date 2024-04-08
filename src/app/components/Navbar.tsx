@@ -5,6 +5,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { motion, useScroll } from "framer-motion";
+import ThemeSwitch from "./buttonComponent/ThemeSwitch";
 
 
 
@@ -28,6 +29,9 @@ const Navbar = () => {
             Developer{" "}
           </span>
         </h1>
+        <ThemeSwitch/>
+
+
 
         <button onClick={() => setOpenNavbar(!openNavbar)} data-collapse-toggle="navbar-multi-level" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
           <span className="sr-only">Open main menu</span>
@@ -44,6 +48,8 @@ const Navbar = () => {
                   <li aria-labelledby="dropdownNavbarLink">
                     <div id="doubleDropdown" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                       <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
+                       
+                       <ThemeSwitch/>
                         {NavLinks?.map((nav, k) => (
                           <li key={k}>
                             <Link
