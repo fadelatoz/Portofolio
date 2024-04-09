@@ -21,14 +21,14 @@ export default function Home() {
         <link rel="theme-color" content="fff" />
       </Head>
       <ScrollProgress />
-          <HomePage />
-          <PageSkills />
-          <PageExperience />
-          <PageProjects />
-        <PageResume />
+      <HomePage />
+      <PageSkills />
+      <PageExperience />
+      <PageProjects />
+      {/* <PageResume /> */}
 
 
-        {/* <div className="absolute bottom-0 z-[5] w-full h-auto">
+      {/* <div className="absolute bottom-0 z-[5] w-full h-auto">
         <Reveal>
 
           <Image

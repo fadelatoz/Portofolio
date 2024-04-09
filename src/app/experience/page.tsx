@@ -8,7 +8,7 @@ const PageExperience = () => {
     <div
       id="/experience"
       // style={{ backgroundImage: "url(/image/bg-3.jpg)" }}
-      className="w-screen h-screen bg-cover bg-center flex items-center justify-center bg-slate-300  dark:bg-gray-800"
+      className="h-screen w-screen flex items-center justify-center bg-cover bg-center bg-slate-300  dark:bg-gray-800 border-b-2 border-white dark:border-black"
     >
       <div
         className="h-[90%] w-[100%] p-6 relative bg-cover bg-center rounded-xl"
@@ -22,7 +22,7 @@ const PageExperience = () => {
         </div>
 
         {/* <Reveal> */}
-          <div className="bg-gray-800 dark:bg-lime-200 shadow-purple-800 w-[100%] p-5 rounded-3xl shadow-lg">
+          <div className="bg-slate-100  dark:bg-slate-800 w-[100%] p-5 rounded-3xl shadow-lg">
             <div className="rounded-r p-5">
               <div >
                 <Image
@@ -41,7 +41,7 @@ const PageExperience = () => {
               </div>
 
               <div className="pt-[20px]">
-                <ul className="text-white font-bold dark:text-slate-800 text-[9px] md:text-[18px] font-mono">
+                <ul className="text-black font-bold dark:text-white text-[9px] md:text-[18px] font-mono">
                   <li className="list-disc">Create and develop the front view of the website based on the design of the UI/UX team that will be displayed and used by the user.</li>
                   <li className="list-disc">Create and develop content management system (CMS) to make it easier for the operations team to change or adjust the appearance of the website without having to know programming</li>
                   <li className="list-disc"> Manage website, user experience, design, and bussines flow.</li>

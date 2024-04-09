@@ -51,7 +51,7 @@ const HomePage = () => {
 
       <div
         id="/"
-        className="h-screen w-screen flex items-center justify-start bg-cover bg-center"
+        className="h-screen w-screen flex items-center justify-start bg-cover bg-center border-b-2 border-white dark:border-black"
         // style={{ backgroundImage: "url(/image/bg-2.jpg)" }}
       >
 

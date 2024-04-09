@@ -15,7 +15,7 @@ const PageProjects = () => {
     <div
       id='/my-projects'
       // style={{ backgroundImage: "url(/image/background/background_projects.jpg)" }}
-      className="h-screen w-screen flex items-center justify-center bg-cover bg-center bg-slate-300  dark:bg-gray-800"
+      className="h-screen w-screen flex items-center justify-center bg-cover bg-center bg-slate-300  dark:bg-gray-800 border-b-2 border-white dark:border-black"
     >
       <div
         className="h-[90%] w-[100%] p-6 relative bg-cover bg-center rounded-xl"
@@ -28,7 +28,7 @@ const PageProjects = () => {
           </h1>
         </div>
 
-        <div className="bg-gray-800 dark:bg-violet-300 shadow-purple-800 w-[100%] p-5 rounded-3xl shadow-lg">
+        <div className="bg-slate-100  dark:bg-slate-800 w-[100%] p-5 rounded-3xl shadow-lg">
 
 
         <Swiper

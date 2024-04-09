@@ -11,7 +11,7 @@ const PageSkills = () => {
     <div
       id="/my-skills"
       // style={{ backgroundImage: "url(/image/bg-2.jpg)" }}
-      className="h-screen w-screen flex items-center justify-center bg-cover bg-center bg-slate-300  dark:bg-gray-800"
+      className="h-screen w-screen flex items-center justify-center bg-cover bg-center bg-slate-300  dark:bg-gray-800 border-b-2 border-white dark:border-black"
     >
       <div className="flex flex-col gap-20 max-w-[80%] text-center items-center">
         <div className="flex flex-col items-center gap-4">
