@@ -26,7 +26,7 @@ const PageProjects = () => {
         className="h-[90%] w-[100%] md:flex p-6 relative bg-cover bg-center rounded-xl"
       >
         {Projects?.map((v,k) => (
-          <div className="max-w-sm mb-3 md:m-5 w-[100%] md:h-[300px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div key={k} className="max-w-sm mb-3 md:m-5 w-[100%] md:h-[300px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <div className="p-5">
               <a href="">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{v.title}</h5>
@@ -34,6 +34,7 @@ const PageProjects = () => {
               <Image
                 src={v.src}
                 alt=';t'
+                key={k}
                 width={0}
                 height={0}
                 sizes="100vw"
