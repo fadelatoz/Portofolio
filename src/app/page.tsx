@@ -24,22 +24,10 @@ export default function Home() {
         <Reveal>
           <HomePage />
         </Reveal>
-
-        <Reveal>
           <PageSkills />
-        </Reveal>
-
-        <Reveal>
           <PageExperience />
-        </Reveal>
-        <Reveal>
           <PageProjects />
-
-        </Reveal>
-        <Reveal>
-
         <PageResume />
-        </Reveal>
 
 
         {/* <div className="absolute bottom-0 z-[5] w-full h-auto">

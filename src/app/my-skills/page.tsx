@@ -11,7 +11,7 @@ const PageSkills = () => {
     <div
       id="/my-skills"
       // style={{ backgroundImage: "url(/image/bg-2.jpg)" }}
-      className="h-screen w-screen flex items-center justify-center bg-cover bg-center"
+      className="h-screen w-screen flex items-center justify-center bg-cover bg-center bg-slate-300  dark:bg-gray-800"
     >
       <div className="flex flex-col gap-20 max-w-[80%] text-center items-center">
         <div className="flex flex-col items-center gap-4">
@@ -24,6 +24,7 @@ const PageSkills = () => {
             Technologies
           </h1>
         </div>
+        <div className="bg-gray-800 dark:bg-violet-300 shadow-purple-800 w-[100%] p-5 rounded-3xl shadow-lg">
         <Swiper
           slidesPerView={5}
           loop={true}
@@ -69,6 +70,7 @@ const PageSkills = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        </div>
       </div>
     </div>
   );

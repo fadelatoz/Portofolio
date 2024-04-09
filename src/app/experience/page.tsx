@@ -6,7 +6,7 @@ const PageExperience = () => {
     <div
       id="/experience"
       // style={{ backgroundImage: "url(/image/bg-3.jpg)" }}
-      className="w-screen h-screen bg-cover bg-center flex items-center justify-center"
+      className="w-screen h-screen bg-cover bg-center flex items-center justify-center bg-slate-300  dark:bg-gray-800"
     >
       <div
         className="h-[90%] w-[100%] p-6 relative bg-cover bg-center rounded-xl"
