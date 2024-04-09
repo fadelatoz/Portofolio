@@ -90,9 +90,10 @@ const HomePage = () => {
               </div>
             </div>
           </Reveal>
+          <Paralaxx title="# About Me"/>
+
 
         </div>
-        <Paralaxx title="# About Me"/>
 
       </div>
     </>
