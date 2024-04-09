@@ -24,7 +24,7 @@ const PageSkills = () => {
             Technologies
           </h1>
         </div>
-        <div className="bg-gray-800 dark:bg-violet-300 shadow-purple-800 w-[100%] p-5 rounded-3xl shadow-lg">
+        <div className="bg-gray-800 dark:bg-orange-200 shadow-purple-800 w-[100%] p-5 rounded-3xl shadow-lg">
         <Swiper
           slidesPerView={5}
           loop={true}

@@ -46,6 +46,13 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  
+    .active{
+      border-bottom: 3px solid white;
+      padding: 0;
+    }
+
+  
     
 }
 

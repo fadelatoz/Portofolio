@@ -90,7 +90,6 @@ const Navbar = () => {
         </div>
       </div>
       {openNavbar &&
-        <Reveal>
           <div className=" w-full top-[3rem] md:hidden md:w-auto fixed bg-gray-800 z-50" id="navbar-multi-level">
             <ul className="flex bg-black-400 border-none mar m-5 flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0   dark:border-gray-700">
               <li>
@@ -166,7 +165,6 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-        </Reveal>
 
       }
     </nav>
