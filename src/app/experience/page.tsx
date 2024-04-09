@@ -1,4 +1,4 @@
-import ContactForm from "@/app/components/ContactForm";
+"use-client"
 import React from "react";
 import { Reveal } from "../components/utilts/Reveal";
 import Image from "next/image";
@@ -21,7 +21,7 @@ const PageExperience = () => {
           </h1>
         </div>
 
-        <Reveal>
+        {/* <Reveal> */}
           <div className="bg-gray-800 dark:bg-lime-200 shadow-purple-800 w-[100%] p-5 rounded-3xl shadow-lg">
             <div className="rounded-r p-5">
               <div >
@@ -56,7 +56,7 @@ const PageExperience = () => {
             </div>
 
           </div>
-        </Reveal>
+        {/* </Reveal> */}
 
 
 
