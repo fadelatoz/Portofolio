@@ -21,9 +21,7 @@ export default function Home() {
         <link rel="theme-color" content="fff" />
       </Head>
       <ScrollProgress />
-        <Reveal>
           <HomePage />
-        </Reveal>
           <PageSkills />
           <PageExperience />
           <PageProjects />

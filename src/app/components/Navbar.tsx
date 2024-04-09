@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-      <div className="fixed top-0 z-[40] w-full h-[45px] dark:bg-gray-800 shadow-zinc-400 p-5  shadow-md flex justify-between items-center px-10 md:px-20">
+      <div className="fixed backdrop-blur-xl top-0 z-[40] w-full h-[45px] dark:bg-gray-800 shadow-zinc-400 p-5  shadow-md flex justify-between items-center px-10 md:px-20">
         <h1 className="text-white text-[25px] font-mono font-semibold">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
             Fadel{" "}

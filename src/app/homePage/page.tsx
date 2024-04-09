@@ -52,16 +52,16 @@ const HomePage = () => {
       <div
         id="/"
         className="h-screen w-screen flex items-center justify-start bg-cover bg-center"
-      // style={ { backgroundImage: "url(/image/main-bg.webp)" }}
+        // style={{ backgroundImage: "url(/image/bg-2.jpg)" }}
       >
 
         <div className="p-10 md:pl-40 pb-56 md:pb-20 flex flex-col gap-5 z-[10] max-w-[750px]">
           <Reveal>
-            <div className="bg-gray-800 w-[100%] dark:bg-violet-400 shadow-purple-800 p-5 rounded-3xl shadow-2xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
+            <div className="w-[100%] bg-slate-100  dark:bg-slate-800 shadow-purple-800 p-5 rounded-3xl shadow-2xl">
               <h1 className=" md:text-[50px] text-[30px] text-black dark:text-white font-semibold">
                 Mohamad Fadel
               </h1>
-              <h3 className="animate-typing overflow-hidden mb-5 whitespace-nowrap border-r-4 border-r-white pr-5 text-base md:text-4xl text-white font-bold">Frontend Developer</h3>
+              <h3 className="animate-typing overflow-hidden mb-5 whitespace-nowrap border-r-4 border-r-white pr-5 text-base md:text-4xl text-black dark:text-slate-300 font-bold">Frontend Developer</h3>
 
               <span className="text-[12px] text-black dark:text-white text-justify font-bold font-mono md:text-[16px]  ">
                 Experience in Analyzing, Designing, Developing and Integrating Front-End & Back-End based applications. Experience in developing applications using NodeJs Services, MongoDb, and Restful Web Services. Experience in developing web applications using HTML, CSS,SASS, JavaScript, ReactJS,

@@ -17,26 +17,6 @@
 }
 
 body {
-  ::-webkit-scrollbar {
-    width: 5px;
-  
-    /* Track */
-    ::-webkit-scrollbar-track {
-      background: #f1f1f1;
-    }
-    
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background: #888;
-    }
-    
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-      background: #555;
-    }
-  }
-  
-
   /* overflow: hidden; */
   overflow-x: hidden;
   color: rgb(var(--foreground-rgb));
@@ -54,6 +34,24 @@ body {
 
   
     
+}
+body {
+  background: radial-gradient(circle, lemonchiffon, black 25%, skyblue);
+
+}
+
+body:after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; left: 0; bottom: 0;
+  background: radial-gradient(circle, transparent, black 25%, transparent);
+  animation: color 1.5s infinite ease-out alternate;
+  opacity: 0;
+}
+
+@keyframes color {
+  0% {  background: radial-gradient(circle, transparent, black 25%, transparent); }
+  100% { opacity: 1; }
 }
 
 @layer utilities {
