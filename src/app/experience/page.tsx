@@ -1,7 +1,8 @@
-"use-client"
+"use client"
+
 import React from "react";
-import { Reveal } from "../components/utilts/Reveal";
 import Image from "next/image";
+import Paralaxx from "../components/paralax";
 
 const PageExperience = () => {
   return (
@@ -14,14 +15,9 @@ const PageExperience = () => {
         className="h-[90%] w-[100%] p-6 relative bg-cover bg-center rounded-xl"
       >
         <div className="text-center">
-          <h1 className="font-semibold text-white text-[50px]">
-            <span className="text-[30px] md:text-[50px] text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
-              Experience{" "}
-            </span>
-          </h1>
+         <Paralaxx title="#Experience"/>
         </div>
 
-        {/* <Reveal> */}
           <div className="bg-slate-100  dark:bg-slate-800 w-[100%] p-5 rounded-3xl shadow-lg">
             <div className="rounded-r p-5">
               <div >
@@ -56,7 +52,6 @@ const PageExperience = () => {
             </div>
 
           </div>
-        {/* </Reveal> */}
 
 
 

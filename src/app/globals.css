@@ -35,7 +35,7 @@ body {
   
     
 }
-body {
+/* body {
   background: radial-gradient(circle, lemonchiffon, black 25%, skyblue);
 
 }
@@ -44,7 +44,7 @@ body:after {
   content: '';
   position: absolute;
   top: 0; right: 0; left: 0; bottom: 0;
-  background: radial-gradient(circle, transparent, black 25%, transparent);
+  background: radial-gradient(circle, transparent, black 2%, transparent);
   animation: color 1.5s infinite ease-out alternate;
   opacity: 0;
 }
@@ -58,4 +58,5 @@ body:after {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
+

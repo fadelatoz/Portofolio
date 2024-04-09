@@ -6,13 +6,46 @@ import PageExperience from "./experience/page";
 import PageProjects from "./my-projects/page";
 import PageResume from "./resume/page";
 import Head from "next/head";
-import ScrollProgress from "./components/ProgressScroll";
-import { Reveal } from "./components/utilts/Reveal";
-import { useTheme } from "next-themes";
+import { useRef } from "react";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  MotionValue
+} from "framer-motion";
+import Paralaxx from "./components/paralax";
 
+function useParallax(value: MotionValue<number>, distance: number) {
+  return useTransform(value, [0, 1], [-distance, distance]);
+
+
+  function Page({ id }: { id: number }) {
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({ target: ref });
+    const y = useParallax(scrollYProgress, 300);
+
+    return (
+      <section>
+        <div ref={ref}>
+          {/* <ScrollProgress />
+          <HomePage />
+          <PageSkills />
+          <PageExperience /> */}
+          <PageProjects />        
+          </div>
+        <motion.h2 style={{ y }}>{`#001`}</motion.h2>
+      </section>
+    );
+  }
+}
 
 
 export default function Home() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+  const y = useParallax(scrollYProgress, 300);
+
   return (
     <>
       <Head>
@@ -20,12 +53,13 @@ export default function Home() {
         <link rel="icon" href="/rocket-lunch.png" />
         <link rel="theme-color" content="fff" />
       </Head>
-      <ScrollProgress />
       <HomePage />
       <PageSkills />
-      <PageExperience />
-      <PageProjects />
-      {/* <PageResume /> */}
+      <PageExperience/>
+      <PageProjects />        
+
+      
+
 
 
       {/* <div className="absolute bottom-0 z-[5] w-full h-auto">

@@ -9,6 +9,7 @@ import Image from "next/image";
 import { useInView, useAnimation, useIsPresent, motion } from "framer-motion";
 import { Reveal } from "../components/utilts/Reveal";
 import { useTheme } from 'next-themes'
+import Paralaxx from "../components/paralax";
 
 
 interface props {
@@ -48,7 +49,6 @@ const HomePage = () => {
 
   return (
     <>
-
       <div
         id="/"
         className="h-screen w-screen flex items-center justify-start bg-cover bg-center border-b-2 border-white dark:border-black"
@@ -91,20 +91,9 @@ const HomePage = () => {
             </div>
           </Reveal>
 
-          {/* <div>
-            <Image
-            src={"/svg/linkedin.svg"}
-            width={25}
-            height={25}
-            al
-            />
-          </div> */}
-
-
-
-
-
         </div>
+        <Paralaxx title="# About Me"/>
+
       </div>
     </>
 
