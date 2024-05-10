@@ -116,7 +116,7 @@ const MenuItem = ({ item }: { item: any }) => {
           >
             <div className="flex flex-row space-x-4 items-center">
               {item.icon}
-              <span className="font-semibold text-xl flex">'asd</span>
+              <span className="font-semibold text-xl flex">asd</span>
             </div>
 
             <div className={`${subMenuOpen ? 'rotate-180' : ''} flex`}>
