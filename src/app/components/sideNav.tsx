@@ -97,14 +97,13 @@ const SideNav = () => {
 
 export default SideNav;
 
-const MenuItem = ({ item }: { item: SideNavItem }) => {
+const MenuItem = ({ item }: { item: any }) => {
   const pathname = usePathname();
   const [subMenuOpen, setSubMenuOpen] = useState(false);
   const toggleSubMenu = () => {
     setSubMenuOpen(!subMenuOpen);
   };
 
-  console.log(pathname, item.link)
 
   return (
     <div className="">
@@ -112,7 +111,7 @@ const MenuItem = ({ item }: { item: SideNavItem }) => {
         <>
           <button
             onClick={toggleSubMenu}
-            className={`flex flex-row items-center p-2 rounded-lg hover-bg-zinc-100 w-full justify-between hover:bg-zinc-100 ${pathname === item.link ? 'bg-gray-200' : ''
+            className={`flex flex-row items-center p-2 rounded-lg hover-bg-zinc-100 w-full justify-between hover:bg-zinc-100 ${pathname === item ? 'bg-gray-200' : ''
               }`}
           >
             <div className="flex flex-row space-x-4 items-center">

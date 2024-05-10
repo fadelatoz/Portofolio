@@ -25,7 +25,7 @@ const PageProjects = () => {
       </div>
         <div className="grid grid-cols-1 gap-1 p-10 md:grid-cols-4 md:gap-4">
           {Projects?.map((v, k) => (
-            <div className="place-items-center p-5 bg-gray-100 dark:bg-gray-900 rounded-md active:bg-secondary md:hover:bg-green-700 transition cursor-pointer hover:scale-95">
+            <div key={k} className="place-items-center p-5 bg-gray-100 dark:bg-gray-900 rounded-md active:bg-secondary md:hover:bg-green-700 transition cursor-pointer hover:scale-95">
               <p className="text-2xl text-black dark:text-white md:hover:text-white">{v.title}</p>
               <Image
                 src={v.src}
