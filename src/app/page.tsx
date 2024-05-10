@@ -54,8 +54,8 @@ export default function Home() {
         <link rel="theme-color" content="fff" />
       </Head>
       <HomePage />
-      <PageSkills />
       <PageExperience/>
+      <PageSkills />
       <PageProjects />        
 
       

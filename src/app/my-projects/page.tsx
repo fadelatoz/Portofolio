@@ -8,6 +8,8 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import Image from 'next/image';
 import Paralaxx from '../components/paralax';
+import { FaHtml5 } from "react-icons/fa";
+
 
 
 
@@ -16,21 +18,15 @@ const PageProjects = () => {
 
     <div
       id='/my-projects'
-      // style={{ backgroundImage: "url(/image/background/background_projects.jpg)" }}
-      className="h-screen w-screen items-center justify-center bg-cover bg-center bg-slate-300  dark:bg-gray-800 border-b-2 border-white dark:border-black"
+      className="h-screen w-screen bg-white  dark:bg-gray-950 bg-cover bg-center border-b-2 border-white dark:border-black"
     >
-      <div className="text-center">
-        <Paralaxx title='#Projects'/>
+     <div className="py-5">
+        <span className="flex item-center text-black dark:text-white justify-center font-bold text-4xl">Projects</span>
       </div>
-      <div
-        className="h-[90%] w-[100%] md:flex p-6 relative bg-cover bg-center rounded-xl"
-      >
-        {Projects?.map((v,k) => (
-          <div key={k} className="max-w-sm mb-3 md:m-5 w-[100%] md:h-[300px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <div className="p-5">
-              <a href="">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{v.title}</h5>
-              </a>
+        <div className="grid grid-cols-1 gap-1 p-10 md:grid-cols-4 md:gap-4">
+          {Projects?.map((v, k) => (
+            <div className="place-items-center p-5 bg-gray-100 dark:bg-gray-900 rounded-md active:bg-secondary md:hover:bg-green-700 transition cursor-pointer hover:scale-95">
+              <p className="text-2xl text-black dark:text-white md:hover:text-white">{v.title}</p>
               <Image
                 src={v.src}
                 alt=';t'
@@ -38,44 +34,18 @@ const PageProjects = () => {
                 width={0}
                 height={0}
                 sizes="100vw"
-                style={{ width: '100%', height: 'auto' }} // optional
-
-                
-              />
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{}</p>
-              <a href="" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Read more
-                <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                </svg>
-              </a>
+                className='mt-3'
+                style={{ width: '100%', height: 'auto' }} 
+                />
+              <p className="text-sm text-left rtl:text-right pt-3 text-gray-500 dark:text-gray-400 mt-3">{v.text}</p>
+              <p className='mt-4'>Tech Stack</p>
+              <div className='grid grid-cols-12 gap-12'>
+                <div className="h-4 w-4 mt-4 md:h-6 md:w-6 border-black dark:border-white  grid place-items-center rounded-md border active:bg-secondary md:hover:bg-secondary transition cursor-pointer hover:scale-95"><FaHtml5 className="h-4 w-4 text-black dark:text-white" /></div>
+              </div>
             </div>
-          </div>
-        ))}
-
-        {/* <div className="bg-slate-100  dark:bg-slate-800 w-[100%] p-5 rounded-3xl shadow-lg">
-
-
-          {Projects.map((project, index) => (
-            <div className=' grid grid-cols-2 mr-5 p-[20px] gap-5 max-w-[100%] min-h-[700px] '>
-
-              <ProjectCard
-                key={index}
-                title={project.title}
-                text={project.text}
-                image={project.src}
-              />
-            </div>
-
-
           ))}
         </div>
-       */}
-
       </div>
-
-    </div>
-
   )
 }
 

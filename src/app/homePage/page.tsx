@@ -51,50 +51,51 @@ const HomePage = () => {
     <>
       <div
         id="/"
-        className="h-screen w-screen flex items-center justify-start bg-cover bg-center border-b-2 border-white dark:border-black"
-        // style={{ backgroundImage: "url(/image/bg-2.jpg)" }}
+        className="h-screen w-screen flex items-center justify-center bg-cover bg-center border-b-2 border-white dark:border-black"
+      // style={{ backgroundImage: "url(/image/bg-2.jpg)" }}
       >
+        <div className="image ">
+          <div className=" flex items-center justify-center" >
+            <img className="w-[40%] md:w-[20%] h-[200px]  md:h-[150px] rounded-full" src="./image/me.jpg" alt="Rounded avatar" />
+          </div>
 
-        <div className="p-10 md:pl-40 pb-56 md:pb-20 flex flex-col gap-5 z-[10] max-w-[750px]">
+
           <Reveal>
-            <div className="w-[100%] bg-slate-100  dark:bg-slate-800 shadow-purple-800 p-5 rounded-3xl shadow-2xl">
-              <h1 className=" md:text-[50px] text-[30px] text-black dark:text-white font-semibold">
-                Mohamad Fadel
-              </h1>
-              <h3 className="animate-typing overflow-hidden mb-5 whitespace-nowrap border-r-4 border-r-white pr-5 text-base md:text-4xl text-black dark:text-slate-300 font-bold">Frontend Developer</h3>
-
-              <span className="text-[12px] text-black dark:text-white text-justify font-bold font-mono md:text-[16px]  ">
-                Experience in Analyzing, Designing, Developing and Integrating Front-End & Back-End based applications. Experience in developing applications using NodeJs Services, MongoDb, and Restful Web Services. Experience in developing web applications using HTML, CSS,SASS, JavaScript, ReactJS,
-                and NextJs. and accustomed to working using SDLC and Agile methods in developing a website.
-              </span>
-
-              <div className="flex-col md:flex-row md:flex gap-5 mt-5 ">
+            <section className='relative grid place-content-center py-10 px-6'>
+              <div className='md:max-w-2xl max-w-md text-center grid gap-1'>
+                <h1 className='md:text-4xl lg:text-5xl text-3xl text-black font-bold dark:text-white'>
+                  Hi I am <span className='underline underline-offset-4 text-primary text-purple-500'>Mohamad Fadel</span> a Front End Developer<span className='text-primary'>.</span>
+                </h1>
+                <p className='text-[0.8rem] max-w-md mx-auto text-black dark:text-white'>
+                  Experience in Analyzing, Designing, Developing and Integrating Front-End & Back-End based applications. Experience in developing applications using NodeJs Services, MongoDb, and Restful Web Services. Experience in developing
+                  web applications using HTML, CSS,SASS, JavaScript, ReactJS, and NextJs. and accustomed to working using SDLC and Agile methods in developing a website.<span className='text-primary'>.</span>
+                </p>
+              </div>
+              <div className='flex items-center justify-center gap-3 mt-5'>
                 {Socials.map((social) => (
                   <>
-                    <Button>
+                    <Button
+                      linkTo={social.linkTo}
+                      onClick={() => window.open(social.linkTo, '_blank')
+                      }
+                    >
                       <Image
                         key={social.name}
                         src={social.src}
                         alt={social.name}
                         className="z-10"
-
                         width={25}
                         height={25}
                       />
                     </Button>
-
                   </>
-
                 ))
                 }
               </div>
-            </div>
+            </section>
           </Reveal>
-          <Paralaxx title="# About Me"/>
-
 
         </div>
-
       </div>
     </>
 

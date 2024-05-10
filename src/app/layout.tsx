@@ -10,6 +10,11 @@ import { Providers } from '../../public/providers'
 import { useTheme } from "next-themes";
 import Image from 'next/image'
 import ThemeSwitch from './components/buttonComponent/ThemeSwitch'
+import SideNav from './components/sideNav'
+import MarginWidthWrapper from './components/margin-width-wrapper'
+import Header from './components/header'
+import PageWrapper from './components/page-wrapper'
+import HeaderMobile from './components/header-mobile'
 
 
 
@@ -53,21 +58,25 @@ export default function RootLayout({
   const bannerStyle = {
     // backgroundImage: `url(/image/main-bg.webp) `,
   }
-  
+
 
   return (
     <html suppressHydrationWarning>
       <body
         style={bannerStyle}
-        // className='bg-white bg-fixed dark:bg-black'  
-        >
+      // className='bg-white bg-fixed dark:bg-black'  
+      >
         <SpeedInsights />
         <Analytics />
         <Providers>
-          <Navbar />
           <main
-            className="w-screen-[99vw] h-screen mx-auto  bg-slate-300  dark:bg-gray-800">
-            {children}
+            className="w-screen-[99vw] h-screen mx-auto  bg-white  dark:bg-gray-950">
+            <Header />
+            <HeaderMobile />
+            <SideNav />
+            <PageWrapper>
+              {children}
+              </PageWrapper>
           </main>
         </Providers>
       </body>

@@ -7,67 +7,33 @@ import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import Paralaxx from "../components/paralax";
 import { Reveal } from "../components/utilts/Reveal";
+import { SkillsCard } from "@/constants";
+import Skills from "../components/Skills";
 
 const PageSkills = () => {
   return (
     <div
       id="/my-skills"
-      className="h-screen w-screen bg-slate-300  dark:bg-gray-800 flex items-center justify-start bg-cover bg-center border-b-2 border-white dark:border-black"
+      className="h-screen w-screen bg-white  dark:bg-gray-950 bg-cover bg-center border-b-2 border-white dark:border-black"
     // style={{ backgroundImage: "url(/image/bg-2.jpg)" }}
     >
+      <div className="py-5">
+        <span className="flex item-center text-black dark:text-white justify-center font-bold text-4xl">My Skills</span>
+        <span className="flex items-center text-black dark:text-white justify-center">Some of my skills, i learnt in my journey of
+          self thought coding.
+        </span>
+      </div>
 
-      <div className="p-10 md:pl-40 pb-56 md:pb-20 w-[100%] flex flex-col gap-5 z-[10] max-w-[750px]">
-        <Reveal>
-          <div className="w-[100%] bg-slate-100  dark:bg-slate-800 shadow-purple-800 p-5 rounded-3xl shadow-2xl">
-          <Paralaxx title="#Skills" />
-            <Swiper
-              slidesPerView={5}
-              loop={true}
-              autoplay={{
-                delay: 0,
-                disableOnInteraction: false,
-              }}
-              speed={5000}
-              modules={[Autoplay]}
-              className="max-w-[80%]"
-            >
-              {SkillData.map((skill, index) => (
-                <SwiperSlide key={index}>
-                  <Image
-                    src={skill.Image}
-                    alt={skill.name}
-                    width={skill.width}
-                    height={skill.height}
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            <Swiper
-              slidesPerView={5}
-              loop={true}
-              autoplay={{
-                delay: 0,
-                disableOnInteraction: false,
-                reverseDirection: true
-              }}
-              speed={5000}
-              modules={[Autoplay]}
-              className="max-w-[80%]"
-            >
-              {SkillData.map((skill, index) => (
-                <SwiperSlide key={index}>
-                  <Image
-                    src={skill.Image}
-                    alt={skill.name}
-                    width={skill.width}
-                    height={skill.height}
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+      <div className=" flex items-center justify-center">
+        <Skills />
+      </div>
+      <div className="grid grid-cols-1 p-10 gap-1 md:grid-cols-4 md:gap-4">
+        {SkillsCard.map((v, k) => (
+          <div className="place-items-center p-5 bg-gray-100 dark:bg-gray-900 rounded-md active:bg-secondary md:hover:bg-green-700 transition cursor-pointer hover:scale-95">
+            <p className="text-2xl text-black dark:text-white md:hover:text-white">{v.title}</p>
+            <p className="text-sm text-left rtl:text-right pt-3 text-gray-500 dark:text-gray-400">{v.desc}</p>
           </div>
-        </Reveal>
-
+        ))}
       </div>
 
     </div>
