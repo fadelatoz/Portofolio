@@ -1,14 +1,13 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
+import {Link} from 'react-scroll'
 import { usePathname } from 'next/navigation';
 import { SIDENAV_ITEMS } from '../../constants/sideNav';
 import { SideNavItem } from '../../types/SIdenav';
 import { Icon } from '@iconify/react';
 import { motion, useCycle } from 'framer-motion';
 import { NavLinks } from '@/constants';
-import ThemeSwitch from './buttonComponent/ThemeSwitch';
 
 type MenuItemWithSubMenuProps = {
   item: SideNavItem;
@@ -66,13 +65,11 @@ const SideNav = () => {
           >
             <div className="md:w-60 bg-white dark:bg-gray-950 z-50 h-screen flex-1 fixed border-r border-zinc-200 hidden md:flex">
               <div className="flex flex-col space-y-6 w-full">
-                <Link
-                  href="/"
+                <div
                   className="flex flex-row space-x-3 items-center justify-center md:justify-start md:px-6 border-b border-zinc-200 h-12 w-full"
                 >
-                  <span className="h-7 w-7 bg-zinc-300 rounded-lg" />
-                  <span className="font-bold text-xl hidden md:flex">Logo</span>
-                </Link>
+                  <span className="h-7 w-7 bg-zinc-300 rounded-lg">MF</span>
+                </div>
 
                 <div className="flex flex-col space-y-2  md:px-6 ">
                   {NavLinks.map((item, idx) => {
@@ -103,6 +100,35 @@ const MenuItem = ({ item }: { item: any }) => {
   const toggleSubMenu = () => {
     setSubMenuOpen(!subMenuOpen);
   };
+  const [isRouting, setisRouting] = useState(false);
+  const path = usePathname();
+  const [prevPath, setPrevPath] = useState("/");
+
+  const [windowPath,setWindowPath] = useState<string>('')
+
+  useEffect(() => {
+    if (prevPath !== path) {
+      setisRouting(true);
+    }
+  }, [path, prevPath]);
+
+  useEffect(() => {
+    if (isRouting) {
+      setPrevPath(path);
+      const timeout = setTimeout(() => {
+        setisRouting(false);
+      }, 1200);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [isRouting]);
+
+  useEffect(() => {
+    if(process?.browser){
+      setWindowPath(window.location.href)
+    }
+  },[isRouting])
+
 
 
   return (
@@ -144,11 +170,23 @@ const MenuItem = ({ item }: { item: any }) => {
       ) : (
         <Link
           href={''}
-          className={`flex flex-row space-x-4 items-center p-2 rounded-lg hover:bg-zinc-100 ${item.path === pathname ? 'bg-zinc-100' : ''
-            }`}
+          key={item.name}
+          activeClass="active"
+          to={item.link}
+          spy={true}
+          smooth={true}
+          hashSpy={true}
+          offset={50}
+          duration={500}
+          delay={1000}
+          isDynamic={true}
+          // onSetActive={this.handleSetActive}
+          // onSetInactive={this.handleSetInactive}
+          ignoreCancelEvents={false}
+          spyThrottle={500}
+          className={`flex flex-row space-x-4 items-center p-2 rounded-lg hover:bg-zinc-100 ${windowPath?.includes(item.name) ? 'bg-zinc-100' : ''}`}
         >
-          {item.icon}
-          <span className="font-semibold text-green-400 text-xl flex">{item.name}</span>
+          <span className="font-semibold active:text-red-50 text-green-400 text-xl flex">{item.name}</span>
         </Link>
       )}
     </div>

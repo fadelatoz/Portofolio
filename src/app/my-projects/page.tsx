@@ -15,7 +15,6 @@ import { FaHtml5 } from "react-icons/fa";
 
 const PageProjects = () => {
   return (
-
     <div
       id='/my-projects'
       className="h-screen w-screen bg-white  dark:bg-gray-950 bg-cover bg-center border-b-2 border-white dark:border-black"
@@ -23,7 +22,7 @@ const PageProjects = () => {
      <div className="py-5">
         <span className="flex item-center text-black dark:text-white justify-center font-bold text-4xl">Projects</span>
       </div>
-        <div className="grid grid-cols-1 gap-1 p-10 md:grid-cols-4 md:gap-4">
+        <div className="grid grid-cols-1 gap-1 p-10 md:grid-cols-4 md:gap-4 max-h-[800px] overflow-y-auto">
           {Projects?.map((v, k) => (
             <div key={k} className="place-items-center p-5 bg-gray-100 dark:bg-gray-900 rounded-md active:bg-secondary md:hover:bg-green-700 transition cursor-pointer hover:scale-95">
               <p className="text-2xl text-black dark:text-white md:hover:text-white">{v.title}</p>

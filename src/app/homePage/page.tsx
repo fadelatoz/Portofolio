@@ -1,15 +1,14 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
 import { HomeButton, Socials } from "@/constants";
-import Button from "../components/buttonComponent/page";
+import Button from "@components/buttonComponent/page";
 import { Link } from 'react-scroll'
 import { usePathname } from "next/navigation";
 import Transition from "../components/Transition";
 import Image from "next/image";
 import { useInView, useAnimation, useIsPresent, motion } from "framer-motion";
-import { Reveal } from "../components/utilts/Reveal";
+import { Reveal } from "@components/utilts/Reveal";
 import { useTheme } from 'next-themes'
-import Paralaxx from "../components/paralax";
 
 
 interface props {
@@ -51,7 +50,7 @@ const HomePage = () => {
     <>
       <div
         id="/"
-        className="h-screen w-screen flex items-center justify-center bg-cover bg-center border-b-2 border-white dark:border-black"
+        className="h-screen w-screen flex items-center justify-center bg-cover bg-center border-b-2 border-black dark:border-white"
       // style={{ backgroundImage: "url(/image/bg-2.jpg)" }}
       >
         <div className="image ">

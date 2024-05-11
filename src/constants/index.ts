@@ -152,14 +152,14 @@ export const NavLinks = [
     link: "/",
   },
   {
-    name: "Skills",
-    icon: GiSkills,
-    link: "/my-skills",
-  },
-  {
     name: "Experience",
     icon: MdWorkOutline,
     link: "/experience",
+  },
+  {
+    name: "Skills",
+    icon: GiSkills,
+    link: "/my-skills",
   },
   {
     name: "Projects",

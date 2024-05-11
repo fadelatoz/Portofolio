@@ -14,7 +14,7 @@ const PageSkills = () => {
   return (
     <div
       id="/my-skills"
-      className="h-screen w-screen bg-white  dark:bg-gray-950 bg-cover bg-center border-b-2 border-white dark:border-black"
+      className="h-screen w-screen bg-white  dark:bg-gray-950 bg-cover bg-center border-b-2 border-black dark:border-white"
     // style={{ backgroundImage: "url(/image/bg-2.jpg)" }}
     >
       <div className="py-5">
@@ -27,7 +27,7 @@ const PageSkills = () => {
       <div className=" flex items-center justify-center">
         <Skills />
       </div>
-      <div className="grid grid-cols-1 p-10 gap-1 md:grid-cols-4 md:gap-4">
+      <div className="grid grid-cols-1 p-10 gap-1 md:grid-cols-4 md:gap-4 md:ml-6 max-h-[500px] overflow-y-auto">
         {SkillsCard.map((v, k) => (
           <div key={k} className="place-items-center p-5 bg-gray-100 dark:bg-gray-900 rounded-md active:bg-secondary md:hover:bg-green-700 transition cursor-pointer hover:scale-95">
             <p className="text-2xl text-black dark:text-white md:hover:text-white">{v.title}</p>

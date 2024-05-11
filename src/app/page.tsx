@@ -57,33 +57,6 @@ export default function Home() {
       <PageExperience/>
       <PageSkills />
       <PageProjects />        
-
-      
-
-
-
-      {/* <div className="absolute bottom-0 z-[5] w-full h-auto">
-        <Reveal>
-
-          <Image
-            src="/image/trees.webp"
-            alt="trees"
-            width={2000}
-            height={2000}
-            className="w-full h-full"
-          />
-                  </Reveal>
-
-        </div>
-
-
-        <Image
-          src="/image/stars.png"
-          alt="stars"
-          height={300}
-          width={300}
-          className="absolute top-0 left-0 z-[10]"
-        /> */}
     </>
 
   );

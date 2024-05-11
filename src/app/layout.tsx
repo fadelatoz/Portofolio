@@ -15,6 +15,8 @@ import MarginWidthWrapper from './components/margin-width-wrapper'
 import Header from './components/header'
 import PageWrapper from './components/page-wrapper'
 import HeaderMobile from './components/header-mobile'
+import ScrollProgress from './components/ProgressScroll'
+import FooterComponents from './components/footer/footer'
 
 
 
@@ -69,14 +71,18 @@ export default function RootLayout({
         <SpeedInsights />
         <Analytics />
         <Providers>
+        <SideNav />
           <main
             className="w-screen-[99vw] h-screen mx-auto  bg-white  dark:bg-gray-950">
+            <MarginWidthWrapper>
             <Header />
             <HeaderMobile />
-            <SideNav />
+            <ScrollProgress />
             <PageWrapper>
               {children}
-              </PageWrapper>
+            </PageWrapper>
+            <FooterComponents/>
+            </MarginWidthWrapper>
           </main>
         </Providers>
       </body>

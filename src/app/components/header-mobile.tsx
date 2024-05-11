@@ -9,6 +9,7 @@ import { SIDENAV_ITEMS } from '../../constants/sideNav';
 import { SideNavItem } from '../../types/SIdenav';
 import { Icon } from '@iconify/react';
 import { motion, useCycle } from 'framer-motion';
+import ThemeSwitch from './buttonComponent/ThemeSwitch';
 
 type MenuItemWithSubMenuProps = {
   item: SideNavItem;
