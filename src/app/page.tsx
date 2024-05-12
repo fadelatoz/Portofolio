@@ -50,7 +50,7 @@ export default function Home() {
     <>
       <Head>
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/rocket-lunch.png" />
+        <link rel="icon" href="/redux.png" sizes="any" />
         <link rel="theme-color" content="fff" />
       </Head>
       <HomePage />

@@ -9,6 +9,8 @@ import Image from "next/image";
 import { useInView, useAnimation, useIsPresent, motion } from "framer-motion";
 import { Reveal } from "@components/utilts/Reveal";
 import { useTheme } from 'next-themes'
+import AboutMe from "../components/footer/AboutMe";
+import { RevealRight } from "../components/utilts/RevealRight";
 
 
 interface props {
@@ -59,8 +61,8 @@ const HomePage = () => {
           </div>
 
 
-          <Reveal>
             <section className='relative grid place-content-center py-10 px-6'>
+            <Reveal>
               <div className='md:max-w-2xl max-w-md text-center grid gap-1'>
                 <h1 className='md:text-4xl lg:text-5xl text-3xl text-black font-bold dark:text-white'>
                   Hi I am <span className='underline underline-offset-4 text-primary text-purple-500'>Mohamad Fadel</span> a Front End Developer<span className='text-primary'>.</span>
@@ -70,29 +72,14 @@ const HomePage = () => {
                   web applications using HTML, CSS,SASS, JavaScript, ReactJS, and NextJs. and accustomed to working using SDLC and Agile methods in developing a website.<span className='text-primary'>.</span>
                 </p>
               </div>
+              </Reveal>
+              <RevealRight>
               <div className='flex items-center justify-center gap-3 mt-5'>
-                {Socials.map((social) => (
-                  <>
-                    <Button
-                      linkTo={social.linkTo}
-                      onClick={() => window.open(social.linkTo, '_blank')
-                      }
-                    >
-                      <Image
-                        key={social.name}
-                        src={social.src}
-                        alt={social.name}
-                        className="z-10"
-                        width={25}
-                        height={25}
-                      />
-                    </Button>
-                  </>
-                ))
-                }
+              <AboutMe/>
               </div>
+              </RevealRight>
+
             </section>
-          </Reveal>
 
         </div>
       </div>

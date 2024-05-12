@@ -10,13 +10,15 @@ import { Reveal } from "../components/utilts/Reveal";
 import { SkillsCard } from "@/constants";
 import Skills from "../components/Skills";
 import Slider from "../components/Slider/slider";
+import { RevealRight } from "../components/utilts/RevealRight";
 
 
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 4,
-    slidesToSlide: 1 // optional, default to 1.
+    items: 3,
+    slidesToSlide: 1, // optional, default to 1.
+    partialVisibilityGutter: 80 // this is needed to tell the amount of px that should be visible.
   },
   tablet: {
     breakpoint: { max: 1024, min: 768 },
@@ -26,7 +28,8 @@ const responsive = {
   mobile: {
     breakpoint: { max: 767, min: 390 },
     items: 1,
-    slidesToSlide: 1 // optional, default to 1.
+    slidesToSlide: 1, // optional, default to 1.
+    partialVisibilityGutter: 40 // this is needed to tell the amount of px that should be visible.
   }
 };
 
@@ -48,7 +51,7 @@ const PageSkills = () => {
       </div>
       </Reveal>
 
-      <Reveal>
+      <RevealRight>
       <Slider 
        responsive={responsive}
        autoPlay={true}
@@ -66,7 +69,7 @@ const PageSkills = () => {
             </div>
           ))}
       </Slider>
-      </Reveal>
+      </RevealRight>
 
 
 

@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Paralaxx from "../components/paralax";
 import { Reveal } from "../components/utilts/Reveal";
+import { RevealRight } from "../components/utilts/RevealRight";
 
 const PageExperience = () => {
   return (
@@ -16,7 +17,7 @@ const PageExperience = () => {
         <span className="flex item-center text-black dark:text-white justify-center font-bold text-4xl">Experience</span>
       </div>
       
-      <Reveal>
+      <RevealRight>
       <div className="items-start justify-start p-10 max-h-[650px] overflow-y-auto md:ml-6">
       <Image
         src="/image/astra_logo.png"
@@ -49,7 +50,7 @@ const PageExperience = () => {
           </li>
         </ol>
       </div>
-      </Reveal>
+      </RevealRight>
     </div>
   );
 };
