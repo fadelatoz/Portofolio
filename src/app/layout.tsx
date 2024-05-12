@@ -27,8 +27,8 @@ export const viewport: Viewport = {
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "PWA Mohamad Fadel",
-  description: "PWA Portofolio with Next 14",
+  title: "Fadel Portolio",
+  description: "PWA Fadel Portofolio with Next 14",
   generator: "Next.js",
   manifest: "/manifest.json",
   keywords: ["nextjs", "nextjs14", "next14", "pwa", "next-pwa"],
