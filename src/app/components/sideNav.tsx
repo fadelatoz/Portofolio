@@ -49,7 +49,7 @@ const SideNav = () => {
     >
       {isOpen &&
         <motion.div
-          className="md:w-60 bg-white dark:bg-gray-950 z-50 h-screen flex-1 fixed border-r border-zinc-200 hidden md:flex"
+          className="md:w-60 bg-white dark:bg-gray-950 z-50 h-screen flex-1 fixed border-r border-zinc-500 hidden md:flex"
           initial={{ x: -300 }} // Initial position off-screen to the left
           animate={{ x: 0 }} // Move in from the left
           transition={{ type: "spring", stiffness: 300, damping: 30 }} // Spring animation
@@ -84,7 +84,7 @@ const SideNav = () => {
       }
 
       {!isOpen &&
-        <div className="md:w-10 bg-white dark:bg-gray-950 z-50 h-screen flex-1 fixed border-r border-zinc-200 hidden md:flex">
+        <div className="md:w-10 bg-white dark:bg-gray-950 z-50 h-screen flex-1 fixed border-r border-zinc-700 hidden md:flex">
           <MenuToggle toggle={toggleOpen} />
         </div>
       }
@@ -177,16 +177,16 @@ const MenuItem = ({ item }: { item: any }) => {
           smooth={true}
           hashSpy={true}
           offset={50}
-          duration={500}
-          delay={1000}
+          duration={200}
+          delay={200}
           isDynamic={true}
           // onSetActive={this.handleSetActive}
           // onSetInactive={this.handleSetInactive}
           ignoreCancelEvents={false}
           spyThrottle={500}
-          className={`flex flex-row space-x-4 items-center p-2 rounded-lg hover:bg-zinc-100 ${windowPath?.includes(item.name) ? 'bg-zinc-100' : ''}`}
+          className={`flex flex-row space-x-4 items-center p-2 rounded-lg hover:bg-zinc-500 `}
         >
-          <span className="font-semibold active:text-red-50 text-green-400 text-xl flex">{item.name}</span>
+          <span className="font-semibold active:text-red-50 text-black dark:text-white text-xl flex">{item.name}</span>
         </Link>
       )}
     </div>

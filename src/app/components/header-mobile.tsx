@@ -29,7 +29,7 @@ const sidebar = {
     clipPath: 'circle(0px at 100% 0)',
     transition: {
       type: 'spring',
-      stiffness: 400,
+      stiffness: 200,
       damping: 40,
     },
   },
@@ -52,7 +52,7 @@ const HeaderMobile = () => {
       ref={containerRef}
     >
       <motion.div
-        className="absolute inset-0 right-0 w-full bg-gray-950"
+        className="absolute inset-0 right-0 w-full bg-white dark:bg-gray-950"
         variants={sidebar}
       />
       <motion.ul
@@ -71,7 +71,7 @@ const HeaderMobile = () => {
                   <Link
                     href={item.path}
                     onClick={() => toggleOpen()}
-                    className={`flex w-full text-2xl ${
+                    className={`flex w-full text-2xl text-black dark:text-white ${
                       item.path === pathname ? 'font-bold' : ''
                     }`}
                   >
@@ -164,7 +164,7 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
         >
           <div className="flex flex-row justify-between w-full items-center">
             <span
-              className={`${pathname.includes(item.path) ? 'font-bold' : ''}`}
+              className={`text-black dark:text-white ${pathname.includes(item.path) ? 'font-bold' : ''}`}
             >
               {item.title}
             </span>
@@ -204,7 +204,7 @@ const MenuItemVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      y: { stiffness: 1000, velocity: -100 },
+      y: { stiffness: 100, velocity: -100 },
     },
   },
   closed: {

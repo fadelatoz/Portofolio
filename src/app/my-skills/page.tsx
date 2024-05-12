@@ -14,14 +14,11 @@ const PageSkills = () => {
   return (
     <div
       id="/my-skills"
-      className="h-screen w-screen bg-white  dark:bg-gray-950 bg-cover bg-center border-b-2 border-black dark:border-white"
+      className="h-screen w-screen bg-white  dark:bg-gray-950 bg-cover bg-center  border-b-2 border-black dark:border-white"
     // style={{ backgroundImage: "url(/image/bg-2.jpg)" }}
     >
       <div className="py-5">
         <span className="flex item-center text-black dark:text-white justify-center font-bold text-4xl">My Skills</span>
-        <span className="flex items-center text-black dark:text-white justify-center">Some of my skills, i learnt in my journey of
-          self thought coding.
-        </span>
       </div>
 
       <div className=" flex items-center justify-center">

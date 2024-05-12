@@ -17,7 +17,7 @@ const PageProjects = () => {
   return (
     <div
       id='/my-projects'
-      className="h-screen w-screen bg-white  dark:bg-gray-950 bg-cover bg-center border-b-2 border-white dark:border-black"
+      className="h-screen w-screen bg-white  dark:bg-gray-950 bg-cover bg-center border-b-2 border-black dark:border-white"
     >
      <div className="py-5">
         <span className="flex item-center text-black dark:text-white justify-center font-bold text-4xl">Projects</span>
@@ -36,7 +36,7 @@ const PageProjects = () => {
                 className='mt-3'
                 style={{ width: '100%', height: 'auto' }} 
                 />
-              <p className="text-sm text-left rtl:text-right pt-3 text-gray-500 dark:text-gray-400 mt-3">{v.text}</p>
+              {/* <p className="text-sm text-left rtl:text-right pt-3 text-gray-500 dark:text-gray-400 mt-3">{v.text}</p> */}
               <p className='mt-4'>Tech Stack</p>
               <div className='grid grid-cols-12 gap-12'>
                 <div className="h-4 w-4 mt-4 md:h-6 md:w-6 border-black dark:border-white  grid place-items-center rounded-md border active:bg-secondary md:hover:bg-secondary transition cursor-pointer hover:scale-95"><FaHtml5 className="h-4 w-4 text-black dark:text-white" /></div>

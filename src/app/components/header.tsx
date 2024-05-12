@@ -21,10 +21,11 @@ const Header = () => {
         },
       )}
     >
+
       <div className="flex h-[47px] items-center justify-between px-4">
-        <div className="flex items-center space-x-4">
-        </div>
         <ThemeSwitch />
+        <div className="flex items-center justify-center space-x-4">
+        </div>
         <div className="hidden md:block">
           <div className="h-8 w-8 rounded-full bg-gray-500 dark:bg-zinc-300 flex items-center justify-center text-center">
             <span className="font-semibold text-sm text-black dark:text-white">MF</span>

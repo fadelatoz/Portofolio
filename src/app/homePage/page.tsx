@@ -50,8 +50,8 @@ const HomePage = () => {
     <>
       <div
         id="/"
-        className="h-screen w-screen flex items-center justify-center bg-cover bg-center border-b-2 border-black dark:border-white"
-      // style={{ backgroundImage: "url(/image/bg-2.jpg)" }}
+        className="h-screen w-screen bg-white  dark:bg-gray-950 justify-center items-center flex bg-cover bg-center border-b-2 border-black dark:border-white"
+        // style={{ backgroundImage: "url(/image/bg-2.jpg)" }}
       >
         <div className="image ">
           <div className=" flex items-center justify-center" >
