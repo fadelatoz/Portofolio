@@ -117,13 +117,23 @@ export const Socials = [
 export const SkillsCard = [
   {
     title : 'Front End Developer',
-    desc : 'As a developer, Iam proficient in Jira and Scrum methodologies. I use Jira to simplify project management tasks like task assignment, prioritization, and progress tracking. Scrum has improved my teamwork, utilizing daily stand-ups, sprint planning, and retrospectives. My expertise ensures high-quality software products are delivered promptly.'
+    desc : 'as a Frontend Developer I can create a website from scratch or continue an existing website, currently I create a website using the Nextjs/React framework using the Javascript or Typescript programming language.'
   },
   {
     title : 'Scrum & Jira',
     desc : 'As a developer, Iam proficient in Jira and Scrum methodologies. I use Jira to simplify project management tasks like task assignment, prioritization, and progress tracking. Scrum has improved my teamwork, utilizing daily stand-ups, sprint planning, and retrospectives. My expertise ensures high-quality software products are delivered promptly.'
   },
   {
+    title : 'Github',
+    desc : 'GitHub is essential for version control and collaboration. Its intuitive interface and features like pull requests and issue tracking simplify the process. Continuous integration ensures up-to-date code. GitHub is vital to my success as a developer.'
+  },
+  {
+    title : 'Agile',
+    desc : 'As a Frontend developer, I am also quite used to using agile in the process of creating a website or application where at the beginning of the creation it starts from backlog grooming until the retro sprint is completed..'
+  },  {
+    title : 'Github',
+    desc : 'GitHub is essential for version control and collaboration. Its intuitive interface and features like pull requests and issue tracking simplify the process. Continuous integration ensures up-to-date code. GitHub is vital to my success as a developer.'
+  },  {
     title : 'Github',
     desc : 'GitHub is essential for version control and collaboration. Its intuitive interface and features like pull requests and issue tracking simplify the process. Continuous integration ensures up-to-date code. GitHub is vital to my success as a developer.'
   },

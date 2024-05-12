@@ -9,6 +9,27 @@ import Paralaxx from "../components/paralax";
 import { Reveal } from "../components/utilts/Reveal";
 import { SkillsCard } from "@/constants";
 import Skills from "../components/Skills";
+import Slider from "../components/Slider/slider";
+
+
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
+    slidesToSlide: 1 // optional, default to 1.
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 768 },
+    items: 3,
+    slidesToSlide: 3 // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 767, min: 390 },
+    items: 1,
+    slidesToSlide: 1 // optional, default to 1.
+  }
+};
+
 
 const PageSkills = () => {
   return (
@@ -24,14 +45,17 @@ const PageSkills = () => {
       <div className=" flex items-center justify-center">
         <Skills />
       </div>
-      <div className="grid grid-cols-1 p-10 gap-1 md:grid-cols-4 md:gap-4 md:ml-6 max-h-[300px] overflow-y-auto">
-        {SkillsCard.map((v, k) => (
-          <div key={k} className="place-items-center p-5 bg-gray-100 dark:bg-gray-900 rounded-md active:bg-secondary md:hover:bg-green-700 transition cursor-pointer hover:scale-95">
-            <p className="text-2xl text-black dark:text-white md:hover:text-white">{v.title}</p>
-            <p className="text-sm text-left rtl:text-right pt-3 text-gray-500 dark:text-gray-400">{v.desc}</p>
-          </div>
-        ))}
-      </div>
+      <Slider autoPlay={true} responsive={responsive}>
+          {SkillsCard.map((v, k) => (
+            <div key={k} className="place-items-center min-h-full  p-5 md:mr-4 bg-gray-100 dark:bg-gray-900 rounded-md active:bg-secondary md:hover:bg-green-700 transition cursor-pointer hover:scale-95">
+              <p className="text-2xl text-black dark:text-white text-justify md:hover:text-white">{v.title}</p>
+              <p className="text-sm  rtl:text-right pt-3 text-justify text-gray-500 dark:text-gray-400">{v.desc}</p>
+
+            </div>
+          ))}
+      </Slider>
+
+
 
     </div>
   );
