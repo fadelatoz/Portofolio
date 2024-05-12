@@ -11,6 +11,7 @@ import { Reveal } from "@components/utilts/Reveal";
 import { useTheme } from 'next-themes'
 import AboutMe from "../components/footer/AboutMe";
 import { RevealRight } from "../components/utilts/RevealRight";
+import { RevealThree } from "../components/utilts/Reveal3";
 
 
 interface props {
@@ -53,7 +54,7 @@ const HomePage = () => {
       <div
         id="/"
         className="h-screen w-screen bg-white  dark:bg-gray-950 justify-center items-center flex bg-cover bg-center border-b-2 border-black dark:border-white"
-        // style={{ backgroundImage: "url(/image/bg-2.jpg)" }}
+      // style={{ backgroundImage: "url(/image/bg-2.jpg)" }}
       >
         <div className="image ">
           <div className=" flex items-center justify-center" >
@@ -61,25 +62,29 @@ const HomePage = () => {
           </div>
 
 
-            <section className='relative grid place-content-center py-10 px-6'>
-            <Reveal>
+          <section className='relative grid place-content-center py-10 px-6'>
               <div className='md:max-w-2xl max-w-md text-center grid gap-1'>
+              <Reveal>
                 <h1 className='md:text-4xl lg:text-5xl text-3xl text-black font-bold dark:text-white'>
-                  Hi I am <span className='underline underline-offset-4 text-primary text-purple-500'>Mohamad Fadel</span> a Front End Developer<span className='text-primary'>.</span>
+                  Hi There I am <span className='underline underline-offset-4 text-primary text-purple-500'>Mohamad Fadel</span> a Front End Developer<span className='text-primary'>.</span>
                 </h1>
-                <p className='text-[0.8rem] max-w-md mx-auto text-black dark:text-white'>
-                  Experience in Analyzing, Designing, Developing and Integrating Front-End & Back-End based applications. Experience in developing applications using NodeJs Services, MongoDb, and Restful Web Services. Experience in developing
-                  web applications using HTML, CSS,SASS, JavaScript, ReactJS, and NextJs. and accustomed to working using SDLC and Agile methods in developing a website.<span className='text-primary'>.</span>
+                </Reveal>
+                <RevealThree>
+                <p className='text-[0.9rem] font-mono mt-2 max-w-md mx-auto text-black dark:text-white'>
+                  Goal-oriented Mid-Level Frontend Developer with knowledge of HTML, CSS, JavaScript,
+                  React, Nextjs, and React Native who wants to use technical proficiency and creativity to develop engaging user
+                  experiences and advance in a professional career. Want to leverage effective debugging, code optimization, and
+                  project collaboration capabilities to produce applications that meet user expectations.
                 </p>
+                </RevealThree>
               </div>
-              </Reveal>
-              <RevealRight>
+            <RevealRight>
               <div className='flex items-center justify-center gap-3 mt-5'>
-              <AboutMe/>
+                <AboutMe />
               </div>
-              </RevealRight>
+            </RevealRight>
 
-            </section>
+          </section>
 
         </div>
       </div>
