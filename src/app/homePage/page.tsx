@@ -55,7 +55,7 @@ const HomePage = () => {
       >
         <div className="image ">
           <div className=" flex items-center justify-center" >
-            <img className="w-[40%] md:w-[20%] h-[200px]  md:h-[150px] rounded-full" src="./image/me.jpg" alt="Rounded avatar" />
+            <img className="w-[40%] md:w-[20%] h-[200px]  md:h-[150px] rounded-full" src="./image/Fadel.png" alt="Rounded avatar" />
           </div>
 
 

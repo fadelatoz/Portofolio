@@ -22,7 +22,7 @@ const Header = () => {
       )}
     >
 
-      <div className="flex h-[47px] items-center justify-between px-4">
+      <div className="flex h-[47px] pl-14 items-center justify-between px-4">
         <ThemeSwitch />
         <div className="flex items-center justify-center space-x-4">
         </div>
