@@ -45,7 +45,15 @@ const PageSkills = () => {
       <div className=" flex items-center justify-center">
         <Skills />
       </div>
-      <Slider autoPlay={true} responsive={responsive}>
+      <Slider 
+       responsive={responsive}
+       autoPlay={true}
+       swipeable={true}
+       draggable={true}
+       showDots={true}
+       infinite={true}
+       partialVisible={true}
+        >
           {SkillsCard.map((v, k) => (
             <div key={k} className="place-items-center min-h-full  p-5 md:mr-4 bg-gray-100 dark:bg-gray-900 rounded-md active:bg-secondary md:hover:bg-green-700 transition cursor-pointer hover:scale-95">
               <p className="text-2xl text-black dark:text-white text-justify md:hover:text-white">{v.title}</p>

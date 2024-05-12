@@ -24,6 +24,7 @@ const Slider : React.FC<sliderProps> =  ({children,responsive, autoPlay,swipeabl
         responsive={responsive}
         autoPlay={autoPlay}
         swipeable={swipeable}
+        autoPlaySpeed={3000}
         draggable={draggable}
         showDots={showDots}
         infinite={infinite}

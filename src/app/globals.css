@@ -26,9 +26,13 @@ body {
       padding: 0;
     }
 
+    .react-multi-carousel-dot--active{
+      button{
+        background: red;
+      }
+  }      
+    }
   
-    
-}
 /* body {
   background: radial-gradient(circle, lemonchiffon, black 25%, skyblue);
 
