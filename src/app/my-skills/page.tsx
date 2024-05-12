@@ -42,9 +42,13 @@ const PageSkills = () => {
         <span className="flex item-center text-black dark:text-white justify-center font-bold text-4xl">My Skills</span>
       </div>
 
+      <Reveal>
       <div className=" flex items-center justify-center">
         <Skills />
       </div>
+      </Reveal>
+
+      <Reveal>
       <Slider 
        responsive={responsive}
        autoPlay={true}
@@ -62,6 +66,8 @@ const PageSkills = () => {
             </div>
           ))}
       </Slider>
+      </Reveal>
+
 
 
 
