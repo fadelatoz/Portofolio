@@ -2,6 +2,7 @@ import { RxHome, RxPerson, RxDashboard, RxClipboard } from "react-icons/rx";
 import { GiSkills } from "react-icons/gi";
 import { LuFiles } from "react-icons/lu";
 import { MdWorkOutline } from "react-icons/md";
+import { FaHtml5 } from "react-icons/fa";
 
 
 export const HomeButton = [
@@ -133,25 +134,38 @@ export const SkillsCard = [
   },  {
     title : 'Github',
     desc : 'GitHub is essential for version control and collaboration. Its intuitive interface and features like pull requests and issue tracking simplify the process. Continuous integration ensures up-to-date code. GitHub is vital to my success as a developer.'
-  },  {
-    title : 'Github',
-    desc : 'GitHub is essential for version control and collaboration. Its intuitive interface and features like pull requests and issue tracking simplify the process. Continuous integration ensures up-to-date code. GitHub is vital to my success as a developer.'
   },
   // {
   //   title : 'Open Source Contributor',
   //   desc : 'Open Source is the future. I usually take some time on weekend and contribute into opensource project. It gives me opportunity to learn from best developer s practices and also gives me a chance to help others and contribute into the community for the good.'
   // }
 ]
+
+
 export const Projects = [
   {
-    title: "Natacara Id By Astra",
+    title: "Natacara Id (Astra International)",
     text: "Natacara merupakan inovasi terbaru dari Astra Digital. Secara harfiah, Natacara merupakan kepanjangan dari ‘Menata Acara’. Dikembangkan secara khusus sebagai platform event management untuk memudahkan para penyelenggara maupun peserta event dalam mengadakan atau mengikuti event.",
     src: "/image/Natacara.png",
+    techStack : ['Html','NextJs','Javascript']
   },
   {
-    title: "Seva Id By Astra",
+    title: "Seva Id (Astra International)",
     text: "SEVA adalah platform yang dioperasikan oleh PT Astra Auto Digital yang memudahkan pengguna dalam proses pengajuan pembelian dan pembiayaan (kredit) mobil yang didukung oleh Mitra yang terpercaya. SEVA memberikan kemudahan bagi pengguna untuk mendapatkan informasi terkait mobil, perhitungan kredit, dan juga pengajuan kredit mobil secara online. Syarat dan ketentuan pengajuan pembiayaan kepada Mitra yang tersedia pada aplikasi",
     src: "/image/seva_id.png",
+    techStack : ['Html','NextJs','Javascript']
+  },
+  {
+    title: "Mitha (Astra International)",
+    text: "SEVA adalah platform yang dioperasikan oleh PT Astra Auto Digital yang memudahkan pengguna dalam proses pengajuan pembelian dan pembiayaan (kredit) mobil yang didukung oleh Mitra yang terpercaya. SEVA memberikan kemudahan bagi pengguna untuk mendapatkan informasi terkait mobil, perhitungan kredit, dan juga pengajuan kredit mobil secara online. Syarat dan ketentuan pengajuan pembiayaan kepada Mitra yang tersedia pada aplikasi",
+    src: "/image/seva_id.png",
+    techStack : ['Html','NextJs','Javascript']
+  },
+  {
+    title: "Isuzu Sales App (Astra International)",
+    text: "SEVA adalah platform yang dioperasikan oleh PT Astra Auto Digital yang memudahkan pengguna dalam proses pengajuan pembelian dan pembiayaan (kredit) mobil yang didukung oleh Mitra yang terpercaya. SEVA memberikan kemudahan bagi pengguna untuk mendapatkan informasi terkait mobil, perhitungan kredit, dan juga pengajuan kredit mobil secara online. Syarat dan ketentuan pengajuan pembiayaan kepada Mitra yang tersedia pada aplikasi",
+    src: "/image/seva_id.png",
+    techStack : ['TypeScript','React Native','ExpoGo']
   },
 ];
 
