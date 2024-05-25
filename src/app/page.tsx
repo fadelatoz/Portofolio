@@ -6,7 +6,7 @@ import PageExperience from "./experience/page";
 import PageProjects from "./my-projects/page";
 import PageResume from "./resume/page";
 import Head from "next/head";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import {
   motion,
   useScroll,
@@ -14,7 +14,6 @@ import {
   useTransform,
   MotionValue
 } from "framer-motion";
-import Paralaxx from "./components/paralax";
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -45,6 +44,28 @@ export default function Home() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
+
+  const testFetch = () => {
+    fetch('https://portofolio-74bce-default-rtdb.asia-southeast1.firebasedatabase.app/projects.json')
+    .then((res) => {
+      console.log(res)
+    })
+  }
+
+  useEffect (() => {
+    return () => testFetch()
+  },[])
+
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('Service Worker registration successful with scope: ', registration.scope);
+        }).catch(error => {
+          console.log('Service Worker registration failed: ', error);
+        });
+    }
+  }, []);
 
   return (
     <>
