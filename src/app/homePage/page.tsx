@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
 import { HomeButton, Socials } from "@/constants";
-import Button from "@components/buttonComponent/page";
 import { Link } from 'react-scroll'
 import { usePathname } from "next/navigation";
 import Transition from "../components/Transition";

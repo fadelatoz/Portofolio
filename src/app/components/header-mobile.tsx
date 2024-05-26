@@ -9,7 +9,6 @@ import { SIDENAV_ITEMS } from '../../constants/sideNav';
 import { SideNavItem } from '../../types/SIdenav';
 import { Icon } from '@iconify/react';
 import { motion, useCycle } from 'framer-motion';
-import ThemeSwitch from './buttonComponent/ThemeSwitch';
 
 type MenuItemWithSubMenuProps = {
   item: SideNavItem;
@@ -69,7 +68,7 @@ const HeaderMobile = () => {
               ) : (
                 <MenuItem>
                   <Link
-                    href={item.path}
+                    href={item?.path || ''}
                     onClick={() => toggleOpen()}
                     className={`flex w-full text-2xl text-black dark:text-white ${
                       item.path === pathname ? 'font-bold' : ''
@@ -164,7 +163,7 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
         >
           <div className="flex flex-row justify-between w-full items-center">
             <span
-              className={`text-black dark:text-white ${pathname.includes(item.path) ? 'font-bold' : ''}`}
+              className={`text-black dark:text-white ${pathname.includes(item?.path || '') ? 'font-bold' : ''}`}
             >
               {item.title}
             </span>
@@ -181,7 +180,7 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
               return (
                 <MenuItem key={subIdx}>
                   <Link
-                    href={subItem.path}
+                    href={subItem.path || ''}
                     onClick={() => toggleOpen()}
                     className={` ${
                       subItem.path === pathname ? 'font-bold' : ''

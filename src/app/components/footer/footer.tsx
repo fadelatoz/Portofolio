@@ -1,10 +1,5 @@
 "use-client"
-import { Socials } from "@/constants";
 import React from "react";
-import Button from "@components/buttonComponent/page";
-import Image from "next/image";
-
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { Reveal } from "../utilts/Reveal";
 import AboutMe from "./AboutMe";
 
