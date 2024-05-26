@@ -24,8 +24,6 @@ export const RevealThree = ({ children, width = 'fit-content' }: props) => {
   })
 
   useEffect(() => {
-    console.log('isRevealHome : ', isInView)
-
     if (isInView) {
       mainControls.start('visible')
     }

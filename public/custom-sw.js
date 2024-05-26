@@ -1,65 +1,35 @@
-const cacheName = "caching-test";
-const staticAssets = [
-    // Add any static assets you need to cache here
-];
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.3.0/workbox-sw.js');
 
-self.addEventListener("install", (event) => {
-    event.waitUntil(
-        caches.open(cacheName).then((cache) => {
-            return cache.addAll(staticAssets);
-        })
-    );
-});
+// Precache static assets
+// workbox.precaching.precacheAndRoute([
+//   // Add paths to your static assets here
+//   '/',
+//   '/homePage',
+//   '/my-projects'
+// ]);
 
-self.addEventListener("fetch", (event) => {
-    const url = new URL(event.request.url);
+// Cache external resources using a cache-first strategy
+workbox.routing.registerRoute(
+  ({url}) => url.origin,
+  new workbox.strategies.CacheFirst()
+);
 
-    // if (url.pathname === "/admin/asset/list") {
-    //     event.respondWith(fetchAndHideResponse(event.request));
-    // } else {
-        event.respondWith(
-            caches.match(event.request).then((cachedResponse) => {
-                return cachedResponse || fetchAndUpdateCache(event.request);
-            })
-        );
-    // }
-});
 
-function fetchAndHideResponse(request) {
-    return fetch(request).then((response) => {
-        if (!response || response.status !== 200 || response.type !== "basic") {
-            return response;
-        }
+// Cache other assets using a network-first strategy
+workbox.routing.registerRoute(
+  ({url}) => url.pathname.startsWith('/api/'),
+  new workbox.strategies.NetworkFirst()
+);
 
-        const responseToCache = response.clone();
-        caches.open(cacheName).then((cache) => {
-            cache.put(request, responseToCache);
-        });
+// Cache images using a cache-first strategy
+workbox.routing.registerRoute(
+  ({request}) => request.destination === 'image',
+  new workbox.strategies.CacheFirst()
+);
 
-        return response.json().then((data) => {
-            // Modify the data as needed before returning the response
-            data.hidden = true; // Example modification
+// Cache CSS and JavaScript files using a stale-while-revalidate strategy
+workbox.routing.registerRoute(
+  ({request}) => request.destination === 'script' || request.destination === 'style',
+  new workbox.strategies.StaleWhileRevalidate()
+);
 
-            return new Response(JSON.stringify(data), {
-                status: response.status,
-                statusText: response.statusText,
-                headers: response.headers,
-            });
-        });
-    });
-}
-
-function fetchAndUpdateCache(request) {
-    return fetch(request).then((response) => {
-        if (!response || response.status !== 200 || response.type !== "basic") {
-            return response;
-        }
-
-        const responseToCache = response.clone();
-        caches.open(cacheName).then((cache) => {
-            cache.put(request, responseToCache);
-        });
-
-        return response;
-    });
-}
