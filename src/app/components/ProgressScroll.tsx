@@ -10,7 +10,7 @@ export default function ScrollProgress() {
     restDelta: 0.001
   });
 
-  console.log(scrollYProgress)
+  // console.log(scrollYProgress)
   return (
     <>
       <motion.div

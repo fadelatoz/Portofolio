@@ -11,7 +11,7 @@ interface button {
 
 
 
-const Button: React.FC<button> = ({ text, children,onClick,linkTo }: button) => {
+const Button: React.FC<button> = ({ text, children,onClick }: any) => {
 
   
 

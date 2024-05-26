@@ -48,7 +48,7 @@ export default function Home() {
   const testFetch = () => {
     fetch('https://portofolio-74bce-default-rtdb.asia-southeast1.firebasedatabase.app/projects.json')
     .then((res) => {
-      console.log(res)
+      // console.log(res)
     })
   }
 
@@ -56,16 +56,16 @@ export default function Home() {
     return () => testFetch()
   },[])
 
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/custom-sw.js')
-        .then(registration => {
-          console.log('Service Worker registration successful with scope: ', registration.scope);
-        }).catch(error => {
-          console.log('Service Worker registration failed: ', error);
-        });
-    }
-  }, []);
+  // useEffect(() => {
+  //   if ('serviceWorker' in navigator) {
+  //     navigator.serviceWorker.register('/sw.js')
+  //       .then(registration => {
+  //         console.log('Service Worker registration successful with scope: ', registration.scope);
+  //       }).catch(error => {
+  //         console.log('Service Worker registration failed: ', error);
+  //       });
+  //   }
+  // }, []);
 
   return (
     <>
